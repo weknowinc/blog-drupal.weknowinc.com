@@ -1,0 +1,9 @@
+<div class="image-slider">
+    {% for image in images %}
+        <div class="image-slider__item">
+        {% block image %}
+            {% include "@molecules/image-caption.twig" with image %}
+        {% endblock %}
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+.by-line {
+  &__picture {
+    display: inline-block;
+    img {
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+
+      @include breakpoint($bp--medium) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  &__text {
+    display: inline-block;
+    padding-left: $spacing--m;
+    font-size: $fs--s;
+
+    @include breakpoint($bp--medium) {
+      font-size: $fs--m;
+    }
+
+    @include breakpoint($bp--large) {
+      font-size: $fs--l;
+    }
+  }
+}

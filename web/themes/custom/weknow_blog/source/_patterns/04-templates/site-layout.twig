@@ -1,0 +1,16 @@
+<div class="site">
+  <div class="site__left js-site__left">
+    {% block header %}
+    {% include "@organisms/site-header.twig" %}
+    {% endblock %}
+    <main class="site-content">
+    {% block content %}
+        <h2>Site Content Here</h2>
+    {% endblock %}
+    </main>
+    {% block footer %}
+    {% include "@organisms/site-footer.twig" %}
+    {% endblock %}
+  </div>
+  {% include "@organisms/sidebar.twig" %}
+</div>

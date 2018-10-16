@@ -1,0 +1,14 @@
+<div class="blog-grid">
+    {% for batch in blogs|batch(2) %}
+        {% set itemClassOddEven = 'blog-grid__group-' ~ (loop.index is odd ? 'odd' : 'even' ) %}
+            <div class="blog-grid__group {{ itemClassOddEven }}">
+                {% for blog in batch %}
+                <div class="blog-grid__item">
+                    {% block blog%}
+                    {% include "@molecules/post-teaser.twig" with blog %}
+                    {% endblock %}
+                </div>
+                {% endfor %}
+            </div>
+    {% endfor %}
+</div>

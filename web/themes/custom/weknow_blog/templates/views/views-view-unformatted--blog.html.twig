@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% set itemClassOddEven = 'blog-grid__group-' ~ (loop.index is odd ? 'odd' : 'even' ) %}
+
+{% embed '@base/_smart-grid.twig' with {
+    classes: "blog-grid",
+    rowItems: {
+        small: 1,
+        large: 2,
+    }
+}%}
+    {% block gridItems %}
+        {% for row in rows %}
+            <div class="blog-grid__item">{{ row.content }}</div>
+        {% endfor %}
+    {% endblock %}
+{% endembed %}

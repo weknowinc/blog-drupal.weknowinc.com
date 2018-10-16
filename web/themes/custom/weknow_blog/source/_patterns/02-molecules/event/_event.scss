@@ -1,0 +1,58 @@
+.event {
+  &.black {
+    color: $c-gray;
+
+    .event__icon {
+
+      svg path {
+        fill: $c-gray !important;
+      }
+    }
+
+    .event__link {
+      @include a-link($link: $c-gray, $hover: none, $deco: none, $deco--hover: none)
+    }
+  }
+
+  &.white {
+    color: $c-white;
+
+    .event__icon {
+
+      svg path {
+        fill: $c-white !important;
+      }
+    }
+
+    .event__link {
+      @include a-link($link: $c-white, $hover: none, $deco: none, $deco--hover: none)
+    }
+  }
+
+  &__icon {
+    text-align: center;
+    @include breakpoint($bp--medium) {
+      float: left;
+      margin-right: $spacing--m;
+    }
+  }
+
+  &__info-event {
+    font-weight: bold;
+    text-align: center;
+    @include breakpoint($bp--medium) {
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__info-place {
+    font-size: $fs--s;
+    text-align: center;
+    @include breakpoint($bp--medium) {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Slick slider
+/* stylelint-disable */
+@import "slick-carousel/slick/slick.scss";
+
+//Override variables
+$slick-font-path: "'https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Signika:300,400,600,700'" !default;
+$slick-font-family: "Poppins" !default;
+$slick-loader-path: "../images/sample/" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: $c-white !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 40px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@import "slick-carousel/slick/slick-theme.scss";
+/* stylelint-enable */
+
+.partners {
+  position: relative;
+  @include site-container();
+
+  &__header {
+    text-align: center;
+    padding-bottom: ($spacing--l * 2);
+  }
+}

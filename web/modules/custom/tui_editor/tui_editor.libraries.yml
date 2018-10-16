@@ -1,0 +1,28 @@
+tui_editor:
+  js:
+    assets/lib/markdown-it/markdown-it.js: { }
+    assets/lib/to-mark/to-mark.js: { }
+    assets/lib/tui-code-snippet/tui-code-snippet.js: { }
+    assets/lib/codemirror/codemirror.js: { }
+    assets/lib/highlightjs/highlight.pack.js: { }
+    assets/lib/squire-rte/squire-raw.js: { }
+    https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js: { type: external, minified: true }
+  css:
+    theme:
+      assets/lib/codemirror/codemirror.css: { }
+      assets/lib/highlightjs/styles/github.css: { }
+      https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css: { type: external, minified: true }
+
+drupal.tui_editor:
+  js:
+    assets/tui-editor/tui-editor-Editor.js: { }
+    assets/tui-editor/tui-editor-extScrollSync.js: { }
+    assets/tui_editor.js: { }
+
+  css:
+    theme:
+      assets/tui-editor/tui-editor.css: { }
+      assets/tui-editor/tui-editor-contents.css: { }
+  dependencies:
+    - tui_editor/tui_editor
+    - core/jquery

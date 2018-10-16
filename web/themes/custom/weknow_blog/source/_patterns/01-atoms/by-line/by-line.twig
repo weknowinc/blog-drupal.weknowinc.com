@@ -1,0 +1,16 @@
+<div class="by-line">
+    {% if img %}
+    <div class="by-line__picture">
+        {% block image %}
+        {% include "@atoms/_img.twig" %}
+        {% endblock %}
+    </div>
+    {% endif %}
+    <div class="by-line__text">
+        {% if author.name %}
+        <small><i>By</i> <span>{{ author.name }} {% if author.position %} </span> &#9679; <span> {{ author.position }} </span>{% endif %} | <i>{{ created|date('F') }} {{ created|date('d') }}, {{ created|date('Y') }}</i></small>
+        {% else %}
+        <small>{{ created|date('F') }} {{ created|date('d') }}, {{ created|date('Y') }}</i></small>
+        {% endif %}
+    </div>
+</div>

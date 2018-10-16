@@ -1,0 +1,49 @@
+<div class="hero">
+    <div class="hero__wrapper">
+        <div class="hero__background-image">
+            <div class="hero__tint hero__tint-{{ overlayColor }}">
+                {% block bgImage %}
+                    {% include "@atoms/_img.twig" %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="hero__caption {{ caption_classes|default([])|join(' ') }}">
+            {% if heroTitle %}
+                {% block title %}
+                    {% if heroSubTitle %}
+                        <h1 class="hero__short-title">{{ heroTitle }}</h1>
+                    {% else %}
+                        <h1>{{ heroTitle }}</h1>
+                    {% endif %}
+                {% endblock %}
+            {% elseif image %}
+                <div class="hero__caption-image">
+                    {% block image %}
+                        {% include "@atoms/_img.twig" with {
+                        imageStyleName:"imageForCaption",
+                        }%}
+                    {% endblock %}
+                </div>
+            {% endif %}
+            {% if byLine %}
+                {% block byline %}
+                    {% include "@atoms/by-line.twig" %}
+                {% endblock %}
+            {% endif %}
+            {% if heroSubTitle %}
+                <div class="hero__subtitle">{{ heroSubTitle }}</div>
+            {% endif %}
+
+            {% if social_links %}
+                {% include '@atoms/social-links.twig' with { links: social_links } %}
+            {% endif %}
+        </div>
+    </div>
+    {% if byLine %}
+        <div class="hero__by-line">
+            {% block bylineMobile %}
+                {% include "@atoms/by-line.twig" %}
+            {% endblock %}
+        </div>
+    {% endif %}
+</div>

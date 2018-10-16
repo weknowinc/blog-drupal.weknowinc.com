@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+{% embed  "@templates/user.twig" %}
+    {% block profileHero %}
+        {#{% embed "@molecules/hero.twig" with {#}
+        {#caption_classes:['profile'],#}
+        {#heroTitle: content.field_full_name|field_value,#}
+        {#overlayColor: content.field_overlay_color|field_value,#}
+        {#byLine:true#}
+        {#} %}#}
+        {#{% block bgImage %}#}
+            {#{{ content.field_cover|field_value }}#}
+        {#{% endblock %}#}
+        {#{% block byline %}#}
+            {#{% include "@atoms/profile-position.twig" with {#}
+            {#position:content.field_position|field_value#}
+            {#} %}#}
+        {#{% endblock %}#}
+        {#{% block bylineMobile %}#}
+        {#{% endblock %}#}
+        {#{% endembed %}#}
+    {% endblock %}
+
+    {% block profileContent %}
+        {#{{ drupal_block('weknow_blog_local_tasks', false) }}#}
+        {% embed '@molecules/profile-description.twig' with {
+        social_links: [
+        { url: content.field_facebook|field_raw('uri') },
+        { url: content.field_twitter|field_raw('uri') },
+        { url: content.field_github|field_raw('uri') },
+        { url: content.field_linkedin|field_raw('uri') },
+        ]
+        } %}
+        {% block image %}
+            {{ content.field_avatar|field_value }}
+        {% endblock %}
+        {% block body %}
+            {{ content.field_bio|field_value }}
+        {% endblock %}
+        {% endembed %}
+    {% endblock %}
+    {% block profileBottom %}
+        {% set text ={
+        '#type' : 'processed_text',
+        '#text' : 'read more about <strong>why weknow</strong>',
+        '#format' : 'rich_text'
+        } %}
+        {% include "@atoms/cta.twig" with {
+        bgColor: "purple",
+        richText: text|render,
+        url: "http://weknowinc.com/why-weknow"
+        } %}
+    {% endblock %}
+{% endembed %}

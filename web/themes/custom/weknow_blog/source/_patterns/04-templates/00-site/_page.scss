@@ -1,0 +1,37 @@
+.page {
+  display: block; // IE doesn't like `<main>`
+  &__content {
+  }
+  &__sidebar {
+
+  }
+}
+
+.sign-in {
+
+  .red-purple-diagonal {
+      @include breakpoint($bp--medium) {
+        min-height: 600px;
+      }
+      @include linear-gradient($c-red, $c-purple, -45deg);
+  }
+  .form {
+    padding: 0 $spacing--l ($spacing--l*2);
+  }
+  align-items: center;
+  .form-text {
+    font-family: $ff--body;
+    font-size: $fs--m;
+    width: 100%;
+  }
+  .form-item {
+    margin-top: $spacing--l;
+    .description {
+      font-size: $fs--xs;
+      color: $c-gray--light;
+    }
+  }
+  .form-actions {
+    margin-top: $spacing--l * 2;
+  }
+}

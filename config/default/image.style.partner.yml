@@ -1,0 +1,15 @@
+uuid: b1e6db7f-60dc-4e78-94f4-cf7b104b7886
+langcode: en
+status: true
+dependencies: {  }
+name: partner
+label: 'Partner (220 x 100)'
+effects:
+  4587a2b4-cdef-4e96-b755-ac0ecb4b1e55:
+    uuid: 4587a2b4-cdef-4e96-b755-ac0ecb4b1e55
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 100
+      anchor: center-center

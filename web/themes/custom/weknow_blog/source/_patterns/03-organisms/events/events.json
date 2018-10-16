@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "icon": "presentation.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "presentation.svg",
+      "event": "Drupal Camp Colombia",
+      "place": "Bogotá, Colombia.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "presentation.svg",
+      "event": "Drupal Camp México",
+      "place": "Ciudad de México, México",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Argentina",
+      "place": "Buenos Aires, Argentina.",
+      "fontcolor": "black"
+    }
+  ]
+}

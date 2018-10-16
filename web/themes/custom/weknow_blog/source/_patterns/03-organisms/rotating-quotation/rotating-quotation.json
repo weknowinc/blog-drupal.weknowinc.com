@@ -1,0 +1,28 @@
+{
+  "quotes":[
+    {
+      "color": "red",
+      "markQuotationPosition": "up",
+      "text": "Now, we're going to fluff this cloud. You can do anything here - the only pre-requisite is that it makes you happy. Just beat the devil out of it. All you have to do is let your imagination go wild. It's almost like something out of a fairytale book."
+    },
+    {
+      "color": "purple",
+      "markQuotationPosition": "left",
+      "text": "here it is. All kinds of happy little splashes. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Put your feelings into it, your heart, it's your world. Nature is so fantastic, enjoy it. Let it make you happy."
+    },
+    {
+      "color": "orange",
+      "markQuotationPosition": "up",
+      "text": "You can create beautiful things - but you have to see them in your mind first. Anyone can paint. We have no limits to our world. We're only limited by our imagination. This is probably the greatest thing to happen in my life - to be able to share this."
+    },
+    {
+      "color": "blue",
+      "markQuotationPosition": "left",
+      "text": "Permanence, perseverance and persistence in spite of all obstacles, discouragements, and impossibilities: It is this, that in all things distinguishes the strong soul from the weak.",
+      "author": {
+        "name": "Thomas Carlyle",
+        "position": "Writer"
+      }
+    }
+  ]
+}

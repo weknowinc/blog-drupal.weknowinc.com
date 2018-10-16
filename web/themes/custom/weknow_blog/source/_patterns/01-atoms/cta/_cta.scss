@@ -1,0 +1,50 @@
+.cta {
+  position: relative;
+  padding: ($spacing--l * 2) 0;
+
+  &__link {
+    padding: $spacing--l $spacing--m;
+    background: $c-transparent;
+    font-family: $ff--poppins;
+    text-transform: uppercase;
+    @include a-link($link: $c-white, $hover: $c-white, $deco: none, $deco--hover: "none");
+    font-weight: normal;
+    @include breakpoint($bp--medium) {
+      padding: ($spacing--l * 2) ($spacing--l);
+    }
+    font-size: $fs--mini;
+    @include breakpoint($bp--medium) {
+      font-size: $fs--xxs;
+    }
+  }
+
+  small {
+    font-size: $fs--mini;
+    @include breakpoint($bp--medium) {
+      font-size: $fs--xxs;
+    }
+  }
+
+  &__color {
+
+    &--none {
+      @include a-link($link: $c-red, $hover: $c-red, $deco: none, $deco--hover: "none");
+    }
+
+    &--purple {
+      background: $c-purple;
+    }
+
+    &--red {
+      background: $c-red;
+    }
+
+    &--blue {
+      background: $c-blue;
+    }
+
+    &--orange {
+      background: $c-orange;
+    }
+  }
+}

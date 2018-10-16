@@ -1,0 +1,19 @@
+<div class="event-grid">
+{% embed '@base/_smart-grid.twig' with {
+classes:'event-grid__wrapper',
+rowItems: {
+small: 1,
+large: 3,
+}
+}%}
+    {% block gridItems %}
+        {% for event in events %}
+            <div class="event-grid__item">
+                {% block event %}
+                    {% include "@molecules/event.twig" with event %}
+                {% endblock %}
+            </div>
+        {% endfor %}
+    {% endblock %}
+{% endembed %}
+</div>

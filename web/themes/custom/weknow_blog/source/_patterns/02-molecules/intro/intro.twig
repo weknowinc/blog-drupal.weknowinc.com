@@ -1,0 +1,15 @@
+<div class="intro">
+    <div class="intro__container">
+        <div class="intro__logo">
+            {% include "@atoms/_img.twig" with {
+                imageStyleName: "introLogo"
+            }%}
+        </div>
+        <div class="intro__quotes">
+            <h2>
+                <span class="typer" id="main" data-words="{{ quotes }}" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>
+                <span class="cursor" data-owner="main"></span>
+            </h2>
+        </div>
+    </div>
+</div>

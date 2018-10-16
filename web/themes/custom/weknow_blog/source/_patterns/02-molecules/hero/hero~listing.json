@@ -1,0 +1,13 @@
+{
+  "overlayColor": "magenta",
+  "heroTitle":"This is the Hero Title",
+  "image":true,
+  "byLine":false,
+  "heroSubTitle":"Hello, this is the subtitle",
+  "social_links":[
+    {"url":"http://www.google.com", "icon":"twitter-stroke.svg"},
+    {"url":"http://www.facebook.com", "icon":"facebook-stroke.svg"},
+    {"url":"http://www.github.com", "icon":"github-stroke.svg"},
+    {"url":"http://www.twitter.com", "icon":"twitter-stroke.svg"}
+  ]
+}

@@ -1,0 +1,6 @@
+services:
+  wk_domain.twig.extension:
+    class: Drupal\wk_domain\TwigExtension\DomainTwigExtension
+    tags:
+      - { name: twig.extension }
+

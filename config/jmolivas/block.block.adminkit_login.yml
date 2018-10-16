@@ -1,0 +1,22 @@
+uuid: 72794763-dd30-412c-bd6c-2092b85cb5bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - adminkit
+_core:
+  default_config_hash: 4s09m-dBd_cib8EyYmOLA0bZHS5IPDawyImhLdE7deU
+id: adminkit_login
+theme: adminkit
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

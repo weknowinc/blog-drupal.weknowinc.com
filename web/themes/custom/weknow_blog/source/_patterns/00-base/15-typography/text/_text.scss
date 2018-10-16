@@ -1,0 +1,136 @@
+$bp--xsmall: 380px;
+$bp--small: 500px;
+$bp--medium: 700px;
+$bp--large: 900px;
+$bp--xlarge: 1100px;
+$bp--xxlarge: 1300px;
+$bp--xxxlarge: 1600px;
+/// Mixin - Set Link Colors & Decoration
+/// @param $link
+/// @param $hover
+/// @param $deco
+/// @param $deco--hover
+@mixin a-link($link: $c-blue, $hover: $c-blue, $deco: none, $deco--hover: underline) {
+  &:link,
+  &:visited {
+    color: $link;
+    text-decoration: $deco;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover;
+    text-decoration: $deco--hover;
+  }
+}
+
+// This will adjust the base HTML font size fluidly between the xsmall and
+// xxlarge breakpoints to a font size between 14px minimum to 18px maximum.
+html {
+  // @include fluid-type(font-size, $bp--xsmall, $bp--xxlarge, 14px, 18px);
+}
+
+body {
+  font-family: $ff--body;
+  color: $c-body-text;
+  font-size: $fs--s;
+  font-weight: lighter;
+}
+
+p {
+  margin: $spacing--l 0;
+  font-weight: lighter;
+  line-height: $lh--text;
+  font-size: $fs--xs;
+  @include breakpoint($bp--medium) {
+    font-size: $fs--s;
+  }
+  &.horizontal-separator {
+    line-height: 100px;
+    border-left: 1px solid $c-red;
+  }
+}
+
+a {
+  @include a-link;
+}
+
+blockquote {
+  font-size: $fs--xxl;
+  position: relative;
+  margin-top: ($spacing--l * 3);
+  line-height: 25px;
+  @include breakpoint($bp--medium) {
+    line-height: ($fs--xxl + 5px);
+  }
+  &::before {
+    content: "“";
+    width: 67px;
+    height: 75px;
+    line-height: 140px;
+    position: absolute;
+    font-size: 128px;
+    font-weight: bold;
+    font-family: $ff--signika;
+    overflow: hidden;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -($spacing--l * 3);
+    @include breakpoint($bp--medium) {
+      top: 0;
+      left: ($spacing--l * 3);
+    }
+  }
+  &::after {
+    content: "”";
+    display: inline-block;
+  }
+  border-left: none;
+  @include breakpoint($bp--medium) {
+    margin-left: $spacing--l;
+    padding-left: ($spacing--l * 8);
+  }
+
+}
+blockquote p {
+  display: inline;
+  font-weight: lighter;
+  font-size: $fs--s;
+  margin-top: 0;
+  @include breakpoint($bp--medium) {
+    font-size: $fs--xxl;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+small {
+  font-size: $fs--xxs;
+}
+
+// inline code wrappers, Markdown style
+//code {
+//  &:before {
+//    content: '`';
+//  }
+//  &:after {
+//    content: '`';
+//  }
+//  // don't show it when in a block of code
+//  pre & {
+//    &:after,
+//    &:before {
+//      content: '';
+//    }
+//  }
+//}

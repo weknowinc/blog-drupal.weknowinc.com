@@ -1,0 +1,24 @@
+uuid: c0745e02-a9c8-4de9-86cb-f2c1abb5f1fe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JicjSTs0sFlXotT5heueWimSVv7jKWSvZZKxe_zwCTo
+id: wk_tags
+migration_tags: null
+migration_group: wk_migration
+label: 'Migrate Tags terms.'
+source:
+  plugin: wk_d8_term
+process:
+  vid:
+    plugin: default_value
+    default_value: tags
+  name: name
+  weight: weight
+  parent:
+    plugin: default_value
+    default_value: 0
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: null

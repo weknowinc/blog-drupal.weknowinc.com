@@ -1,0 +1,57 @@
+.navigation {
+  background: transparent;
+  padding: $spacing--m;
+  margin: 0;
+}
+
+.local-tasks {
+  .clear-all {
+    clear: both;
+  }
+  .nav {
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    justify-content: center;
+    display: flex;
+      > li {
+      position: relative;
+      display: block;
+
+      > a {
+        position: relative;
+        display: block;
+        padding: $spacing--m;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: $c-white;
+        }
+      }
+    }
+  }
+  .nav-pills {
+    > li {
+      float: left;
+
+      // Links rendered as pills
+      > a {
+        border-radius: 5px;
+      }
+      + li {
+        margin-left: 2px;
+      }
+
+      // Active state
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $c-purple;
+          background-color: $c-white;
+        }
+      }
+    }
+  }
+
+}

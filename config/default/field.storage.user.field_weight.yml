@@ -1,0 +1,20 @@
+uuid: 6883cf6e-fe1a-4b05-8c61-51fd5b25d827
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+    - weight
+id: user.field_weight
+field_name: field_weight
+entity_type: user
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

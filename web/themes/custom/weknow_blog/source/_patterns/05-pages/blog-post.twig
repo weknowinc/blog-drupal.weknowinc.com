@@ -1,0 +1,92 @@
+{% extends "@templates/site-layout.twig"%}
+{% block content %}
+    {% embed  "@templates/blog-post.twig" %}
+    {% block blogPostHero %}
+        {% include "@molecules/hero.twig" with{
+
+        heroTitle: "<strong>This is</strong> a blog post",
+        overlayColor: "red-purple-diagonal",
+        img:{
+        src: "../../../../images/sample/hero-example.png",
+        alt: "Alt"
+        },
+        byLine:true
+        } %}
+    {% endblock %}
+
+    {% block blogPostContent %}
+        <h2>{{ text }}</h2>
+        <br>
+        <p>{{ excerpt.long }}</p>
+        <br>
+        {% include "@atoms/_img.twig" with{
+        img:{
+        src:"../../../../images/sample/width-image.png"
+        }
+
+        }%}
+        <br>
+        <p>{{ excerpt.long }}</p>
+        <br>
+        <p>{{ excerpt.long }}</p>
+        <br>
+        <blockquote>{{ excerpt.long }}</blockquote>
+        <br>
+        <p>{{ excerpt.long }}</p>
+        <br>
+        <p>{{ excerpt.long }}</p>
+    {% endblock %}
+    {% block blogPostDisqus %}
+            {% include "@molecules/disqus.twig" with{
+            forumShortname:"example",
+            pageId:"2",
+            pageUrl:"https://drupalconsole.com"
+            }%}
+    {% endblock %}
+    {% block blogPostRelated %}
+    {% embed '@base/_smart-grid.twig' with {
+    rowItems: {
+    small: 1,
+    large: 3,
+    }
+    } %}
+        {% block gridItems %}
+            {% include "@molecules/card-related-post.twig" with {
+            img:{
+            src:"../../../../images/sample/width-image.png"
+            },
+            type:"blog",
+            title: "Related blog post #1",
+            resume: "I was blessed with a very steady hand; and it comes in very handy when you're doing these little delicate things. Let your imagination be your guide. We start with a vision in our heart, and we put it on canvas. You create the dream - then you bring it into your world. Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner.",
+            }%}
+            {% include "@molecules/card-related-post.twig" with {
+            img:{
+            src:"../../../../images/sample/width-image.png"
+            },
+            type:"blog",
+            title: "Related blog post #2",
+            resume: "I was blessed with a very steady hand; and it comes in very handy when you're doing these little delicate things. Let your imagination be your guide. We start with a vision in our heart, and we put it on canvas. You create the dream - then you bring it into your world. Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner.",
+            }%}
+            {% include "@molecules/card-related-post.twig" with {
+            img:{
+            src:"../../../../images/sample/width-image.png"
+            },
+            type:"blog",
+            title: "Related blog post #3",
+            resume: "I was blessed with a very steady hand; and it comes in very handy when you're doing these little delicate things. Let your imagination be your guide. We start with a vision in our heart, and we put it on canvas. You create the dream - then you bring it into your world. Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner.",
+            }%}
+        {% endblock %}
+    {% endembed %}
+    {% endblock %}
+    {% block blogPostBottom %}
+        {% include "@atoms/_cta.twig" with {
+        bgColor: "purple",
+        richText: "<span>Read more about <strong>Our approach</strong></span>",
+        link: {
+        text: "This is a click to action",
+        url: "#"
+        }
+        } %}
+    {% endblock %}
+    {% endembed %}
+{% endblock %}

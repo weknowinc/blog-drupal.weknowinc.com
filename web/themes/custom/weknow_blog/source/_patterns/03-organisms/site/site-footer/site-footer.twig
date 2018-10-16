@@ -1,0 +1,58 @@
+<footer class="site__footer site-footer">
+    <div class="site-footer__wrapper">
+        <div class="site-footer__branding">
+            <div class="site-footer__branding-logo">
+                {% block logo %}
+                    {% include "@atoms/_img.twig" %}
+                {% endblock %}
+                <div class="copyright">{{ copyright }}</div>
+            </div>
+            {#<div class="site-footer__branding-social-links">#}
+                {#<div class="site-footer__branding-social-links-item">#}
+                    {#<a href="{{ facebookLink }}"><i class="icon--facebook"></i></a>#}
+                {#</div>#}
+                {#<div class="site-footer__branding-social-links-item">#}
+                    {#<a href="{{ twitterLink }}"><i class="icon--twitter"></i></a>#}
+                {#</div>#}
+            {#</div>#}
+        </div>
+        {#<div class="site-footer__menu">#}
+
+             {#<h6>Useful links</h6>#}
+            {#{% block menuFooter %}#}
+                {#<ul>#}
+                    {#<li>Home</li>#}
+                    {#<li>About us</li>#}
+                    {#<li>Approach</li>#}
+                    {#<li>Case Studies</li>#}
+                    {#<li>Blog</li>#}
+                    {#<li>Contact</li>#}
+                {#</ul>#}
+            {#{% endblock %}#}
+        {#</div>#}
+
+        {#<div class="site-footer__contact">#}
+            {#<h6>Contact us</h6>#}
+            {#<ul>#}
+                {#<li><strong>USA: </strong>{{ usPhone }}</li>#}
+                {#{% if crPhone is not empty %}<li><strong>COSTA RICA: </strong>{{ crPhone }}</li>{% endif %}#}
+                {#{% if mxPhone is not empty %}<li><strong>MEXICO: </strong>{{ mxPhone }}</li>{% endif %}#}
+                {#{% if auPhone is not empty %}<li><strong>AUSTRALIA: </strong>{{ auPhone }}</li>{% endif %}#}
+            {#</ul>#}
+            {#{% if cta %}#}
+            {#<div class="site-footer__contact-cta">#}
+                {#{% block cta %}#}
+                {#{% include "@atoms/cta.twig" with {#}
+                {#bgColor: "none",#}
+                {#richText: "<span>Contact <strong>Us!</strong></span>",#}
+                {#link: {#}
+                {#text: "This is a click to action",#}
+                {#url: "#"#}
+                {#}#}
+                {#} %}#}
+                {#{% endblock %}#}
+            {#</div>#}
+            {#{% endif %}#}
+        {#</div>#}
+    </div>
+</footer>

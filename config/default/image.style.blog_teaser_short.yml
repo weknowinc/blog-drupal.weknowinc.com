@@ -1,0 +1,15 @@
+uuid: f69f4a84-c898-46e3-b8c4-72f5c2ea3d17
+langcode: en
+status: true
+dependencies: {  }
+name: blog_teaser_short
+label: 'Blog Teaser Short (600 x 400)'
+effects:
+  283a4ed1-d17b-4a91-aa9b-d2145471811a:
+    uuid: 283a4ed1-d17b-4a91-aa9b-d2145471811a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

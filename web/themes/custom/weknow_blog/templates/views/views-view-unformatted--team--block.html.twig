@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% set team = [] %}
+
+{% for row in rows %}
+    {% set hasProfile = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_has_profile }}']|striptags|trim %}
+    {% set userId = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ uid }}']|striptags|trim %}
+    {% set memberImg = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_avatar }}']|striptags|trim %}
+    {% set memberName = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_full_name }}']|striptags|trim %}
+    {% set memberPosition = row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_position }}']|striptags|trim %}
+    {% set memberProfile = (hasProfile == "True") ? path('entity.user.canonical', {'user': userId}) : false %}
+    {%
+    set team = team|merge(
+    [
+        {
+            profile: {
+                src: memberImg,
+                alt: memberName
+            },
+            name: memberName,
+            jobtitle: memberPosition,
+            url: memberProfile
+        }
+    ])
+    %}
+{% endfor %}
+
+{% embed "@organisms/team.twig" with {
+team:team
+}%}
+{% endembed %}

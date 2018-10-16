@@ -1,0 +1,17 @@
+{
+  "images": [{
+    "src": "../../../../images/sample/post-sample.png",
+    "alt": "Post Sample Alt Text"
+  }],
+  "author": {
+    "name": "Jhon Doe",
+    "jobtitle": "CEO / Co Founder"
+  },  
+  "title": "Post title for patternlabs sample",
+  "subtitle": "Here goes a little description about the post content.",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis mi nec tellus rutrum aliquam. Nunc ullamcorper libero eget libero sodales finibus vel at est. Morbi non dui dui. Curabitur non consectetur enim, sit amet egestas diam. Cras ac ex tempus, efficitur turpis a, volutpat ex. Cras aliquam augue ex, in accumsan eros auctor vitae. Duis felis justo, posuere id diam sed, fringilla molestie ligula.",
+  "readmore": {
+    "text": "- READ <strong>MORE</strong>",
+    "url": "http://www.anexusit.com"
+  }
+}

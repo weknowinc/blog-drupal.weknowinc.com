@@ -1,0 +1,26 @@
+<div class="profile">
+    <div class="profile__hero clear-both">
+        {% block profileHero %}
+            {% include "@molecules/hero-profile.twig" with{
+                title: "This is a <strong>blog post</strong>",
+                position: "CEO Acme",
+            } %}
+        {% endblock %}
+    </div>
+    <div class="profile__content clear-both">
+        {% block profileContent %}
+            <h2>Blog post Content goes here</h2>
+        {% endblock %}
+    </div>
+    <div class="profile__bottom clear-both">
+        {% block profileBottom %}
+            {% include "@atoms/cta.twig" with {
+            bgColor: "purple",
+            richText: 'read more about <strong>why weknow</strong>',
+            url: "/contact"
+            } %}
+        {% endblock %}
+    </div>
+</div>
+
+

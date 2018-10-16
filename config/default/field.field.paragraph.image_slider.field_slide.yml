@@ -1,0 +1,76 @@
+uuid: 6ae2563e-3444-4a9c-b679-105f948348b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.image_slider.field_slide
+field_name: field_slide
+entity_type: paragraph
+bundle: image_slider
+label: Slide
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+    target_bundles_drag_drop:
+      40_60_two_column_content:
+        weight: 17
+        enabled: false
+      60_40_two_column_content:
+        weight: 18
+        enabled: false
+      caption:
+        weight: 19
+        enabled: false
+      card:
+        weight: 20
+        enabled: false
+      cta:
+        weight: 21
+        enabled: false
+      custom_view:
+        weight: 22
+        enabled: false
+      grid_card:
+        weight: 23
+        enabled: false
+      hero:
+        weight: 24
+        enabled: false
+      image:
+        enabled: true
+        weight: 25
+      image_slider:
+        weight: 26
+        enabled: false
+      partner:
+        weight: 27
+        enabled: false
+      partners:
+        weight: 28
+        enabled: false
+      plugin_block:
+        weight: 29
+        enabled: false
+      quote:
+        weight: 30
+        enabled: false
+      rotating_quotation:
+        weight: 31
+        enabled: false
+      text_content:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

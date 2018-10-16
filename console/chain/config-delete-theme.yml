@@ -1,0 +1,39 @@
+command:
+  name: config:delete:theme
+commands:
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_footer
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_help
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_local_actions
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_local_tasks
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_main_menu
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_messages
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_powered
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_search
+  - command: 'config:delete'
+    arguments:
+        type: active
+        name: block.block.weknowinc_theme_tools

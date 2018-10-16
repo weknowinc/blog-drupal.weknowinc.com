@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "name": "$c-red",
+      "value": "#af1f45",
+      "comment": "Primary Color. Used for links"
+    },
+    {
+      "name": "$c-blue",
+      "value": "#288dc1",
+      "comment": ""
+    },
+    {
+      "name": "$c-purple",
+      "value": "#644b78",
+      "comment": ""
+    },
+    {
+      "name": "$c-orange",
+      "value": "#ff9e16",
+      "comment": ""
+    },
+    {
+      "name": "$c-orange-pager",
+      "value": "#ef4416",
+      "comment": ""
+    },
+    {
+      "name": "$c-blue-dark",
+      "value": "#1e1e27",
+      "comment": ""
+    },
+    {
+      "name": "$c-white",
+      "value": "white",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray--lightest",
+      "value": "hsl(0, 0%, 89%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray--lighter",
+      "value": "hsl(0, 0%, 80%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray--light",
+      "value": "hsl(0, 0%, 60%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray",
+      "value": "#58595b",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray--dark",
+      "value": "hsl(0, 0%, 40%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray--darker",
+      "value": "hsl(0, 0%, 20%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-gray--darkest",
+      "value": "hsl(0, 0%, 16.1%)",
+      "comment": ""
+    },
+    {
+      "name": "$c-black",
+      "value": "black",
+      "comment": ""
+    },
+    {
+      "name": "$c-transparent",
+      "value": "transparent",
+      "comment": ""
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$c-</code> in <code>source/_patterns/00-base/05-colors/_color-vars.scss</code>"
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 678f4fde-9819-43d2-8b03-5fdee7ef635a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_author_company
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.field_quote_author_company
+field_name: field_quote_author_company
+entity_type: paragraph
+bundle: quote
+label: 'Quote Author Company'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

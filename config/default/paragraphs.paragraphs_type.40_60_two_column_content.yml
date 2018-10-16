@@ -1,0 +1,9 @@
+uuid: fe918ccd-0e45-49fb-9975-5d2a9ab8d050
+langcode: en
+status: true
+dependencies: {  }
+id: 40_60_two_column_content
+label: '40:60 Two Column Content'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

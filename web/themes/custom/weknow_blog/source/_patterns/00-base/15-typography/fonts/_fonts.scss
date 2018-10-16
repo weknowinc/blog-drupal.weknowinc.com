@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Signika:300,400,600,700|Josefin+Sans:300,400,700');
+
+$fw--100: 100; // thin/hairline
+$fw--200: 200; // extra-light/ultra-light
+$fw--300: 300; // light*
+$fw--400: 400; // normal/regular/book/roman*
+$fw--500: 500; // medium
+$fw--600: 600; // semi-bold/demi-bold
+$fw--700: 700; // bold*
+$fw--800: 800; // extra-bold/ultra-bold
+$fw--900: 900; // black/heavy
+
+// Place a `.ttf`, `.woff`, & `.woff2` in `$font-directory`
+$font-faces: (
+  //(
+  //  "name": "LatoRegular",
+  //  "filename": "Lato-Regular"
+  //),
+) !default;
+
+// Child themes can add to Fonts with `$extra-font-faces`
+@if variable-exists(extra-font-faces) {
+  $font-faces: join($font-faces, $extra-font-faces);
+}
+
+$font-directory: "../fonts/" !default;
+
+@each $font-face in $font-faces {
+  $filename: map-get($font-face, "filename");
+  @font-face {
+    font-family: map-get($font-face, "name");
+    src: url("#{$font-directory}#{$filename}.woff2") format("woff2"),
+      url("#{$font-directory}#{$filename}.woff") format("woff"),
+      url("#{$font-directory}#{$filename}.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+$ff--signika: 'signika', sans-serif;
+$ff--poppins: 'poppins', sans-serif;
+$ff--josefin: 'Josefin Sans', sans-serif;
+
+$ff--heading: $ff--signika !default;
+$ff--body: $ff--signika !default;
+
+// font Sizes
+$fs--giant: 100px;
+$fs--xxl: 40px;
+$fs--xl: 34px;
+$fs--l: 30px;
+$fs--m: 26px;
+$fs--s: 22px;
+$fs--xs: 18px;
+$fs--xxs: 14px;
+$fs--mini: 10px;
+$lh--text : 34px;

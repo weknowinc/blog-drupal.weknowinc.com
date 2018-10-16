@@ -1,0 +1,31 @@
+.pager {
+  position: relative;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $c-gray--lightest;
+
+    a {
+      padding: 5px;
+      font-size: $fs--xxs;
+      @include a-link($link: $c-black, $hover: $c-black, $deco: none, $deco--hover: underline)
+    }
+
+    &.is-active {
+      background: $c-orange-pager;
+      
+      a {
+        @include a-link($link: $c-white, $hover: $c-white, $deco: none, $deco--hover: underline)
+      }
+    }
+  }
+
+  &__item--first ,
+  &__item--last {
+    display: none;
+  }
+}

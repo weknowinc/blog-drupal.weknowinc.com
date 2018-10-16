@@ -1,0 +1,40 @@
+{
+  "events":[
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    },
+    {
+      "icon": "event.svg",
+      "event": "Drupal Camp Costa Rica",
+      "place": "San José, Costa Rica.",
+      "fontcolor": "black"
+    }
+  ]
+}

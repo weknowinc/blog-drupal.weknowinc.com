@@ -1,0 +1,31 @@
+$nav-item-hover-line-size: 3px;
+.nav-item {
+  display: block;
+  background: transparent;
+  font-family: $ff--poppins;
+  font-weight: $fw--300;
+  text-align: left;
+  margin: $spacing--m $spacing--l;
+  border-bottom: $nav-item-hover-line-size solid transparent;
+  font-size: $fs--xxs;
+
+  &__link {
+    @include a-link($link: $c-white, $hover: $c-white, $deco: none, $deco--hover: none);
+  }
+
+  &__text {
+    color: $c-white;
+  }
+
+  &__selected {
+    font-weight: $fw--600;
+  }
+
+  @include breakpoint($bp--medium) {
+    display: inline-block;
+    text-align: center;
+    &:hover {
+      border-bottom: $nav-item-hover-line-size solid $c-white;
+    }
+  }
+}

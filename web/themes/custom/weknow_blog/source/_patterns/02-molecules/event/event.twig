@@ -1,0 +1,17 @@
+<div class="event {{ fontcolor }}">
+    {% if url %}<a href="{{ url }}" class="event__link" target="_blank">{% endif %}
+    <div class="event__icon">
+        {% if icon %}
+        {{ source('@svgs/' ~ icon) }}
+        {% endif %}
+    </div>
+    <div class="event__info">
+        <div class="event__info-event">
+            {{ event }}
+        </div>
+        <div class="event__info-place">
+            <small>{{ place }}</small>
+        </div>    
+    </div>
+    {% if url %}</a>{% endif %}
+</div>

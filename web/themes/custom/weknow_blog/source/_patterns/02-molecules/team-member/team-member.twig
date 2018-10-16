@@ -1,0 +1,15 @@
+<div class="team-member">
+    {% if url %}<a href="{{ url }}">{% endif %}
+    <div class="team-member__profile">
+        {% include "@atoms/_img.twig" with {
+            img: profile
+        }%}
+    </div>
+    {% if show_caption|default(true) %}
+    <div class="team-member__caption">
+        <span class="team-member__caption-text name">{{ name }}</span>
+        <span class="team-member__caption-text jobtitle">{{ jobtitle }}</span>
+    </div>
+    {% endif %}
+    {% if url %}</a>{% endif %}
+</div>

@@ -1,0 +1,8 @@
+{% set jsId = 'js-nav-item--' ~ nav.id ? nav.id : 0 %}
+<ul id="{{ jsId }}" class="nav js-nav">
+  {% for item in nav.items %}
+    {% block item %}
+      {% include "@atoms/nav-item.twig" with { item: item } %}
+    {% endblock %}
+  {% endfor %}
+</ul>

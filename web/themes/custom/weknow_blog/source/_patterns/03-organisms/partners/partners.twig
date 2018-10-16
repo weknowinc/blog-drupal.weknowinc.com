@@ -1,0 +1,94 @@
+<div class="partners">
+    <div class="partners__header">
+        <h4>OUR PARTNERS</h4>
+    </div>
+    <div class="partners__content">
+            {% for partner in partners %}
+                <div class="partners__item">
+                    {% block partner %}
+                        {% include "@molecules/partner.twig" with partner %}
+                    {% endblock %}
+                </div>
+            {% endfor %}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.acquia.com/",#}
+            {#partner: "Acquia",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/acquia-logo.png",#}
+            {#alt: "acquia"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.pantheon.io/",#}
+            {#partner: "Pantheon",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/pantheon-logo.png",#}
+            {#alt: "pantheon"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.phase2technology.com/",#}
+            {#partner: "Phase 2",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/phase-2-logo.png",#}
+            {#alt: "phase2"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.acquia.com/",#}
+            {#partner: "Acquia",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/acquia-logo.png",#}
+            {#alt: "acquia"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.pantheon.io/",#}
+            {#partner: "Pantheon",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/pantheon-logo.png",#}
+            {#alt: "pantheon"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.phase2technology.com/",#}
+            {#partner: "Phase 2",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/phase-2-logo.png",#}
+            {#alt: "phase2"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.acquia.com/",#}
+            {#partner: "Acquia",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/acquia-logo.png",#}
+            {#alt: "acquia"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+        {#<div class="partners__item">#}
+            {#{% include "@molecules/partner.twig" with {#}
+            {#website: "https://www.pantheon.io/",#}
+            {#partner: "Pantheon",#}
+            {#logoImage: {#}
+            {#src:"../../../../images/sample/partners/pantheon-logo.png",#}
+            {#alt: "pantheon"#}
+            {#}#}
+            {#} %}#}
+        {#</div>#}
+    </div>
+</div>

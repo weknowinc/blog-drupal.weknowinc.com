@@ -1,0 +1,99 @@
+.quote {
+  position: relative;
+
+  &__color {
+
+    &-blue {
+      color: $c-blue;
+    }
+
+    &-red {
+      color: $c-red;
+    }
+
+    &-purple {
+      color: $c-purple;
+    }
+
+    &-orange {
+      color: $c-orange;
+    }
+  }
+
+  &__wrapper {
+
+    @include breakpoint($bp--medium) {
+      width: $bp--medium;
+      margin: auto;
+    }
+  }
+
+  &__mark-quotation {
+    position: relative;
+    min-height: 60px;
+    @include breakpoint($bp--medium) {
+      min-height: 80px;
+    }
+    &-char::before {
+      content: "“";
+      @include center($horizontally: true, $vertically: true, $absolute: true, $undo: true);
+      font-size: 90px;
+      font-weight: bold;
+      font-family: $ff--signika;
+      overflow: hidden;
+      height: 60px;
+      @include breakpoint($bp--medium) {
+        font-size: 128px;
+        height: 80px;
+      }
+    }
+  }
+
+  &__distribution-up {
+    &-mark-quotation {
+      text-align: center;
+    }
+  }
+
+  &__distribution-left {
+    @include grid-span(3, 1);
+    &-mark-quotation {
+      text-align: center;
+    }
+
+    &-text {
+      @include grid-span(9, 4);
+    }
+  }
+
+  &__distribution-none {
+    &-mark-quotation {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-weight: lighter;
+    font-size: $fs--s;
+    @include breakpoint($bp--medium) {
+      font-size: $fs--xl;
+    }
+  }
+
+  &__author {
+
+    font-size: $fs--h6;
+    color: $c-gray--light;
+    font-weight: lighter;
+    margin-top: $spacing--m;
+
+    @include breakpoint($bp--medium) {
+      font-size: $fs--h3;
+      margin-top: ($spacing--l * 2);
+    }
+
+    &-name {
+      font-weight: bold;
+    }
+  }
+}

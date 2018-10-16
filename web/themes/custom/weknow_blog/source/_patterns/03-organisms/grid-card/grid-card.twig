@@ -1,0 +1,13 @@
+{% embed '@base/_smart-grid.twig' with {
+classes: "grid-card",
+rowItems: {
+small: 1,
+large: 3,
+}
+} %}
+    {% block gridItems %}
+        {% for card in cards %}
+            {% include "@molecules/card.twig" with card %}
+        {% endfor %}
+    {% endblock %}
+{% endembed %}

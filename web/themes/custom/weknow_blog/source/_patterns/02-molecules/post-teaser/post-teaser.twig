@@ -1,0 +1,35 @@
+<div class="post-teaser">
+    <div class="post-teaser__slider">
+    {% for item in images %}
+        <div class="post-teaser__image">
+            {% block images %}
+            {% include "@atoms/_img.twig" with {
+                "img": item
+            }%}
+            {% endblock %}
+        </div>
+    {% endfor %}
+    </div>
+
+    <div class="post-teaser__title">{{ title }}</div>
+    <div class="post-teaser__subtitle">{{ subtitle }}</div>
+
+    <div class="post-teaser__author">
+        {% block byLine %}
+        {% include "@atoms/by-line.twig" with {
+        "img": false,
+        "author": {
+        "name":  author.name,
+        "url": "#"
+        },
+        "created": created
+        }%}
+        {% endblock %}
+    </div>
+
+    <div class="post-teaser__content">{{ body }}</div>
+    
+    <div class="post-teaser__readmore">
+        <a href="{{ url }}"><small>- READ <strong>MORE</strong></small></a>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="profile-description">
+  <div class="profile-description__image">
+    {% block image %}
+      {% include '@atoms/_img.twig' with { img: profile }  %}
+    {% endblock %}
+  </div>
+  <div class="profile-description__verbiage">
+    <div class="profile-description__title-separator"></div>
+    <div class="profile-description__title h1">
+      {% block title %}
+        Who am I?
+      {% endblock %}
+    </div>
+
+    <div class="profile-description__body">
+      {% block body %}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {% endblock %}
+    </div>
+
+    {% include '@atoms/social-links.twig' with { links: social_links } %}
+
+    {% if recent_links|default([])|length > 0 %}
+      <span class="profile-description__subtitle h1">Recent articles</span>
+      <ul class="profile-description__recent">
+        {% for link in recent_links %}
+          <li>
+            {% include '@atoms/related-line.twig' with { url: link.url, label: link.label, created: link.created } %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>

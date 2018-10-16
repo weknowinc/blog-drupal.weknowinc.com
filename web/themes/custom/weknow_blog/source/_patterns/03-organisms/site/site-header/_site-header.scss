@@ -1,0 +1,29 @@
+.site__header {
+  position: relative;
+  @include breakpoint($bp--medium) {
+    background: transparent;
+  }
+}
+
+.site__left {
+  /* stylelint-disable */
+  &.slideOn {
+    .site__header {
+      width: 67%;
+      svg {
+        opacity: 0.0;
+        transition: opacity 0.8s;
+        @include breakpoint($bp--medium) {
+          opacity: 1.0;
+        }
+      }
+    }
+  }
+  /* stylelint-enable */
+  .site__header {
+    svg {
+      opacity: 1.0;
+      transition: opacity 3.8s;
+    }
+  }
+}

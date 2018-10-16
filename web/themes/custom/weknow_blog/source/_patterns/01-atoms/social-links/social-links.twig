@@ -1,0 +1,33 @@
+{% import _self as me %}
+
+{% if social_links|default([])|length > 0 %}
+  <ul class="profile-description__social">
+  {% for link in social_links %}
+
+    {% if link.url matches '/github.com/' %}
+      {{ me.social_link(link.url, 'github.svg') }}
+    {% endif %}
+
+    {% if link.url matches '/facebook.com/' %}
+      {{ me.social_link(link.url, 'facebook.svg') }}
+    {% endif %}
+
+    {% if link.url matches '/twitter.com/' %}
+      {{ me.social_link(link.url, 'twitter.svg') }}
+    {% endif %}
+
+    {% if link.url matches '/linkedin.com/' %}
+      {{ me.social_link(link.url, 'linkedin.svg') }}
+    {% endif %}
+
+  {% endfor %}
+  </ul>
+{% endif %}
+
+{% macro social_link(url, icon) %}
+  <li>
+    <a href="{{ url }}" target="__blank">
+      {{ source('@svgs/' ~ icon) }}
+    </a>
+  </li>
+{% endmacro %}

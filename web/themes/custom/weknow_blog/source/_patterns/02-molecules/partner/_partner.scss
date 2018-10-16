@@ -1,0 +1,10 @@
+.partner {
+  display: inline-block;
+  text-align: center;
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+}

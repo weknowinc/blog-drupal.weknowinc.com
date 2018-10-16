@@ -1,0 +1,23 @@
+<div class="presentation-grid">
+    <header>
+        <h3>Presentation</h3>
+        <p>At weKnow, we take every mentorship opportunity we can get to give upcoming talent a hand. So we dedicate our time and resources to speak and share our expertise at community events. Enzo, Jesus and several other team members have global recognition for participating and speaking at DrupalCons and camps in over 12 countries.</p>
+    </header>
+    {% embed '@base/_smart-grid.twig' with {
+    classes:'presentation-grid__wrapper',
+    rowItems: {
+    small: 1,
+    large: 3,
+    }
+    }%}
+        {% block gridItems %}
+            {% for event in events %}
+                <div class="presentation-grid__item">
+                    {% block event %}
+                        {% include "@molecules/event.twig" with event %}
+                    {% endblock %}
+                </div>
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
+</div>

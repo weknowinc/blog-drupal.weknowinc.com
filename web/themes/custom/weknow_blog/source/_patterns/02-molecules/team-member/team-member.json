@@ -1,0 +1,9 @@
+{
+  "profile": {
+    "src": "../../../../images/sample/profilepic-example.png",
+    "alt": "John Doe Alt Text"
+  },
+  "name": "John Doe",
+  "jobtitle": "CEO / Co Founder",
+  "url":"#"
+}

@@ -1,0 +1,142 @@
+.hero {
+  max-height: 500px;
+  &__wrapper {
+    position: relative;
+  }
+  &__background-image {
+
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      max-height: 500px;
+    }
+
+  }
+
+  &__tint {
+    position: relative;
+    min-height:100px;
+    @include breakpoint($bp--medium) {
+      min-height:400px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.7;
+      transition: background 0.3s linear;
+    }
+
+    &-purple::before {
+      background: $c-purple;
+    }
+
+    &-red::before {
+      background: $c-red;
+    }
+
+    &-blue::before {
+      background: $c-blue;
+    }
+
+    &-orange::before {
+      background: $c-orange;
+    }
+
+    &-red-purple-diagonal::before {
+      @include linear-gradient($c-red, $c-purple, -45deg);
+    }
+
+    &-orange-red-diagonal::before {
+      @include linear-gradient($c-orange, $c-red, -45deg);
+    }
+
+    &-purple-blue::before {
+      @include linear-gradient($c-purple, $c-blue);
+    }
+
+    &-red-orange::before {
+      @include linear-gradient($c-red, $c-orange);
+    }
+
+    &-blue-orange::before {
+      @include linear-gradient($c-blue, $c-orange);
+    }
+
+    &-blue-red-diagonal::before {
+      @include linear-gradient($c-blue, $c-red, -45deg);
+    }
+  }
+
+  &__caption {
+    @include center($absolute: true);
+    text-align: center;
+    width: 90%;
+    @include breakpoint($bp--small) {
+      width: auto;
+    }
+
+    h1 {
+      color: $c-white;
+      font-weight: lighter;
+      font-size: $fs--h6;
+
+      @include breakpoint($bp--medium) {
+        font-size: $fs--h5;
+      }
+
+      @include breakpoint($bp--large) {
+        font-size: $fs--h1;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+    }
+
+    .by-line {
+      display: none;
+      color: $c-white;
+      a {
+        color: $c-white;
+      }
+      @include breakpoint($bp--medium) {
+        display: block;
+      }
+    }
+  }
+  &__short-title{
+    margin-bottom: 0;
+  }
+  &__by-line {
+    text-align: center;
+    display: block;
+    margin: $spacing--l ;
+    padding-bottom: $spacing--l ;
+    border-bottom: 2px solid $c-gray;
+    @include breakpoint($bp--medium) {
+      display: none;
+    }
+  }
+  &__subtitle{
+    color:$c-white;
+  }
+  .profile-description__social{
+    svg{
+      fill:$c-white;
+      width:22px;
+      height:22px;
+    }
+  }
+}
+
+

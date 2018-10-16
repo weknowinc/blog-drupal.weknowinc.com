@@ -1,0 +1,86 @@
+uuid: 2b38d745-68cd-4a8c-90a1-68bda79da7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_highlighted
+    - node.type.landing
+    - paragraphs.paragraphs_type.40_60_two_column_content
+    - paragraphs.paragraphs_type.60_40_two_column_content
+    - paragraphs.paragraphs_type.custom_view
+    - paragraphs.paragraphs_type.grid_card
+    - paragraphs.paragraphs_type.rotating_quotation
+    - paragraphs.paragraphs_type.text_content
+  module:
+    - entity_reference_revisions
+id: node.landing.field_landing_highlighted
+field_name: field_landing_highlighted
+entity_type: node
+bundle: landing
+label: 'Landing Highlighted'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      40_60_two_column_content: 40_60_two_column_content
+      60_40_two_column_content: 60_40_two_column_content
+      custom_view: custom_view
+      grid_card: grid_card
+      rotating_quotation: rotating_quotation
+      text_content: text_content
+    target_bundles_drag_drop:
+      40_60_two_column_content:
+        enabled: true
+        weight: 17
+      60_40_two_column_content:
+        enabled: true
+        weight: 18
+      caption:
+        weight: 19
+        enabled: false
+      card:
+        weight: 20
+        enabled: false
+      cta:
+        weight: 21
+        enabled: false
+      custom_view:
+        enabled: true
+        weight: 22
+      grid_card:
+        enabled: true
+        weight: 23
+      hero:
+        weight: 24
+        enabled: false
+      image:
+        weight: 25
+        enabled: false
+      image_slider:
+        weight: 26
+        enabled: false
+      partner:
+        weight: 27
+        enabled: false
+      partners:
+        weight: 28
+        enabled: false
+      plugin_block:
+        weight: 29
+        enabled: false
+      quote:
+        weight: 30
+        enabled: false
+      rotating_quotation:
+        enabled: true
+        weight: 31
+      text_content:
+        enabled: true
+        weight: 32
+field_type: entity_reference_revisions

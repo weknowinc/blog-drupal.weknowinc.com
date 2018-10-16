@@ -1,0 +1,37 @@
+id: wk_jmolivas_files
+label: Migrate Files.
+migration_group: wk_migration
+source:
+  plugin: wk_file
+  constants:
+    # source_base_path must be set by the tool configuring this migration. It
+    # represents the fully qualified path relative to which uris in the files
+    # table are specified, and must end with a /. See source_full_path
+    # configuration in this migration's process pipeline as an example.
+    source_base_path: '/var/www/html/sites/default/files/'
+process:
+  filename: filename
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - filepath
+    -
+      plugin: urlencode
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - uri
+  filemime: filemime
+  filesize: filesize
+  status: status
+  created: created
+  changed: changed
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: entity:file

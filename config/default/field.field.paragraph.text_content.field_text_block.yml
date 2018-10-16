@@ -1,0 +1,21 @@
+uuid: 07f8b219-cfee-4a24-8b45-093a3570b19c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_block
+    - paragraphs.paragraphs_type.text_content
+  module:
+    - text
+id: paragraph.text_content.field_text_block
+field_name: field_text_block
+entity_type: paragraph
+bundle: text_content
+label: 'Text Block'
+description: 'Please provide content into the WYSIWYG editor for this text block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

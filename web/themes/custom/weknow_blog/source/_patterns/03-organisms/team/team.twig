@@ -1,0 +1,18 @@
+<div class="team">
+{% embed '@base/_smart-grid.twig' with {
+    "rowItems": {
+      "medium": 3,
+    }
+} %}
+{% block gridItems %}
+    {% for member in team  %}
+        {% include "@molecules/team-member.twig" with {
+        "profile": member.profile,
+        "name": member.name,
+        "jobtitle": member.jobtitle,
+        "url": member.url
+        } %}
+    {% endfor %}
+{% endblock %}
+{% endembed %}
+</div>

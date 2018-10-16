@@ -1,0 +1,15 @@
+////
+/// Custom adjustments to admin tabs
+////
+
+
+// Remove overflow hidden on vertical tabs, not sure why/if this is necessary in some instances, but it can
+// break the paragraph dropdown and any chosen dropdown
+.field-group-tabs-wrapper {
+  .vertical-tabs {
+    overflow: visible;
+  }
+  ul {
+    list-style-type: none;
+  }
+}

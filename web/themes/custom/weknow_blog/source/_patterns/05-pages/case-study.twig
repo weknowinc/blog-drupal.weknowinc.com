@@ -1,0 +1,55 @@
+{% extends "@templates/site-layout.twig" %}
+{% block content %}
+{% embed  "@templates/case-study.twig" %}
+    {% block caseStudyHero %}
+        {% include "@molecules/hero.twig" with{
+        heroTitle: "<strong>This is</strong> a case study",
+        overlayColor: "red-orange",
+        img:{
+            src: "../../../../images/sample/hero-example.png",
+            alt: "Alt"
+        }
+        } %}
+    {% endblock %}
+
+    {% block caseStudyContent %}
+        <h2>{{ text }}</h2>
+        <br>
+        <p>{{ excerpt.long }}</p>
+        <br>
+        {% include "@atoms/_img.twig" with{
+            img:{
+                src:"../../../../images/sample/width-image.png"
+            }
+
+        }%}
+        <br>
+        <p>{{ excerpt.long }}</p>
+        <br>
+        <p>{{ excerpt.long }}</p>
+
+    {% endblock %}
+    {% block caseStudyQuote %}
+        {% include "@molecules/quote.twig" with{
+        color: "blue",
+        markQuotationPosition: "up",
+        text: "There it is. All kinds of happy little splashes. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Put your feelings into it, your heart, it's your world. Nature is so fantastic, enjoy it. Let it make you happy.",
+        author: {
+        name: "Jeff Walpole",
+        position: "CEO",
+        company: "Phase 2"
+        }
+        } %}
+    {% endblock %}
+    {% block caseStudyBottom %}
+        {% include "@atoms/_cta.twig" with {
+        bgColor: "purple",
+        richText: "<span>Read more about <strong>Our approach</strong></span>",
+        link: {
+        text: "This is a click to action",
+        url: "#"
+        }
+        } %}
+    {% endblock %}
+{% endembed %}
+{% endblock %}

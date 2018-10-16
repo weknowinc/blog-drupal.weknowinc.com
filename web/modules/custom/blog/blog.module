@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains blog.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function blog_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the blog module.
+    case 'help.page.blog':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Blog') . '</p>';
+      return $output;
+
+    default:
+  }
+}

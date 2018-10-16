@@ -1,0 +1,25 @@
+<div class="quote">
+    <div class="quote__wrapper quote__wrapper-distribution-{{ markQuotationPosition }}">
+        <div class="quote__color quote__color-{{ color }}">
+            <div class="quote__distribution quote__distribution-{{ markQuotationPosition }} quote__distribution-{{ markQuotationPosition }}-mark-quotation quote__mark-quotation">
+                <div class="quote__mark-quotation-char"></div>
+            </div>
+            <div class="quote__distribution quote__distribution-{{ markQuotationPosition }} quote__distribution-{{ markQuotationPosition }}-text quote__text">
+                {{ text }}
+                {% if author %}
+                    <div class="quote__author">
+                        <div class="quote__author-name">
+                            {{ author.name }}
+                        </div>
+                        <div class="quote__author-position">
+                            {{ author.position }}
+                        </div>
+                        <div class="quote__author-company">
+                            {{ author.company }}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

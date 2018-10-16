@@ -1,0 +1,28 @@
+<header class="site__header js-site__header">
+    {% block navbar%}
+        {% include "@organisms/navbar.twig" with {
+        "nav": {
+        "id": 0,
+        "items": [{
+        "text": "Home",
+        "uri": "#"
+        }, {
+        "text": "About Us",
+        "uri": ""
+        }, {
+        "text": "Approach",
+        "uri": "#"
+        }, {
+        "text": "Case Studies",
+        "uri": "#"
+        }, {
+        "text": "Blog",
+        "uri": "#"
+        }, {
+        "text": "Contact",
+        "uri": "#"
+        }]
+        }
+        } %}
+    {% endblock %}
+</header>

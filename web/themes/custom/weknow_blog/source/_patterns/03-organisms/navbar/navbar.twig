@@ -1,0 +1,19 @@
+{% set jsId = 'js-navbar--' ~ navbar.id ? navbar.id : 0 %}
+<nav id="{{ jsId }}" class="navbar js-navbar">
+  <div class="navbar__wrapper">
+    <a href="{{ frontUrl }}"><div id="{{ jsId }}__logo" class="navbar__logo js-navbar__logo">{{ source('@svgs/logo.svg') }}</div></a>
+    <div id="{{ jsId }}__menu-icon" class="navbar__menu-icon js-navbar__menu-icon">{{ source('@svgs/menu-icon.svg') }}</div>
+    <div class="navbar__menu-container js-navbar__menu-container">
+      {% block navigation %}
+          {% include "@molecules/navigation.twig" with { nav: { items: nav.items } } %}
+      {% endblock %}
+      {% block cta %}
+          {% include "@atoms/cta.twig" with {
+            bgColor: none,
+            richText: 'Ready ro paerner <strong> with us?</strong>',
+            url: "/contact"
+          } %}
+      {% endblock %}
+    </div>
+  </div>
+</nav>

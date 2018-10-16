@@ -1,0 +1,33 @@
+{
+  "name": "weknow-blogs",
+  "version": "1.0.0",
+  "description": "We know blogs migrations app",
+  "main": "index.js",
+  "dependencies": {
+    "markdown-to-json": "^0.5.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-markdown": "^0.7.0",
+    "grunt-markdown-to-json": "^0.4.2",
+    "gulp": "^3.9.1",
+    "gulp-append": "^0.3.4",
+    "gulp-combine-json": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-json": "^1.0.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-json-concat": "0.0.5",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-jsoncombine": "^1.0.3",
+    "gulp-markdown-to-json": "^1.0.3",
+    "gulp-merge-json": "^1.1.0",
+    "gulp-rewrite-image-path": "0.0.4",
+    "gulp-tap": "^1.0.1",
+    "patternlab-md2json": "^0.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Heissen Lopez",
+  "license": "ISC"
+}

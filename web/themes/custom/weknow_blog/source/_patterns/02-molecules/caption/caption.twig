@@ -1,0 +1,26 @@
+<div class="caption">
+    <div class="caption__type caption__type-{{ type }}">
+        {% if type == 'text' %}
+        <div class="caption__text">
+            {% block text %}
+             <p>{{ text }}</p>
+            {% endblock %}
+        </div>
+        {% elseif type == 'image' %}
+        <div class="caption__image">
+            <figure >
+            {% block image %}
+            {% include "@atoms/_img.twig" %}
+            {% endblock %}
+            </figure>
+        </div>
+        {% endif %}
+        {% if cta %}
+        <div class="caption__cta">
+            {% block cta %}
+            {% include "@atoms/cta.twig" %}
+            {% endblock %}
+        </div>
+        {% endif %}
+    </div>
+</div>

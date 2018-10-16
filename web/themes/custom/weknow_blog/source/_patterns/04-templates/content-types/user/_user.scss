@@ -1,0 +1,16 @@
+.profile {
+  &__bottom {
+
+    .cta {
+      padding: ($spacing--l * 2) 0;
+      @include breakpoint($bp--medium) {
+        padding: ($spacing--l * 4) 0;
+      }
+      @include site-container();
+      text-align: center;
+    }
+  }
+  .hero__by-line {
+    display: none;
+  }
+}

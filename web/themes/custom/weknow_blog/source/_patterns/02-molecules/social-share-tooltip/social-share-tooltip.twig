@@ -1,0 +1,15 @@
+<div class="social-share-tooltip">
+    <span class="social-share-tooltip__separator"></span>
+    <div class="social-share-tooltip__button">
+        <input type="checkbox" class="social-share-tooltip__checkbox" id="share" checked>
+        <label for="share" class="social-share-tooltip__label icon--share"></label>
+        <div class="social-share-tooltip__social">
+            <ul>
+                <a href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title|replace({' ': '+'}) }}"><li class="twitter"><i class="icon--twitter"></i></li></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}"><li class="facebook"><i class="icon--facebook"></i></li></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ url }}&title={{ title }}&summary=&source="><li class="linkedin"><i class="icon--linkedin"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    <span class="social-share-tooltip__separator"></span>
+</div>

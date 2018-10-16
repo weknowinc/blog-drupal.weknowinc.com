@@ -1,0 +1,9 @@
+{% set itemClassOddEven = 'nav-item--' ~ (loop.index is odd ? 'odd' : 'even' ) %}
+{% set jsId = 'js-nav-item--' ~ (loop.index ? loop.index : 0) %}
+<li id="{{ jsId }}" class="nav-item {{ itemClassOddEven }} js-nav-item">
+  {% if item.uri %}
+    <a class="nav-item__link" href="{{ item.uri }}">{{ item.text }}</a>
+  {% else %}
+    <div class="nav-item__text">{{ item.text }}</div>
+  {% endif %}
+</li>

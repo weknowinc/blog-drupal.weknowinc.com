@@ -1,0 +1,21 @@
+.landing-page-contact {
+  p a {
+    color: $c-blue;
+    font-size: ($fs--l);
+    @include breakpoint($bp--medium) {
+      font-size: ($fs--xxl * 2);
+    }
+  }
+
+  .contact-phones {
+    @include breakpoint($bp--medium) {
+      display: flex;
+    }
+    .item {
+      width: 100%;
+      @include breakpoint($bp--medium) {
+        width: 25%;
+      }
+    }
+  }
+}

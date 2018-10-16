@@ -1,0 +1,76 @@
+{
+    "partners":[
+        {
+            "website": "https://www.phase2technology.com/",
+            "partner": "Phase 2",
+            "img": {
+                "src":"../../../../images/sample/partners/phase-2-logo.png",
+                "alt": "phase2"
+            }
+        },
+        {
+            "website": "https://www.acquia.com/",
+            "partner": "Acquia",
+            "img": {
+                "src":"../../../../images/sample/partners/acquia-logo.png",
+                "alt": "acquia"
+            }
+        },
+        {
+            "website": "https://www.pantheon.io/",
+            "partner": "Pantheon",
+            "img": {
+                "src":"../../../../images/sample/partners/pantheon-logo.png",
+                "alt": "pantheon"
+            }
+        },
+        {
+            "website": "https://www.phase2technology.com/",
+            "partner": "Phase 2",
+            "img": {
+                "src":"../../../../images/sample/partners/phase-2-logo.png",
+                "alt": "phase2"
+            }
+        },
+        {
+            "website": "https://www.acquia.com/",
+            "partner": "Acquia",
+            "img": {
+                "src":"../../../../images/sample/partners/acquia-logo.png",
+                "alt": "acquia"
+            }
+        },
+        {
+            "website": "https://www.pantheon.io/",
+            "partner": "Pantheon",
+            "img": {
+                "src":"../../../../images/sample/partners/pantheon-logo.png",
+                "alt": "pantheon"
+            }
+        },
+        {
+            "website": "https://www.phase2technology.com/",
+            "partner": "Phase 2",
+            "img": {
+                "src":"../../../../images/sample/partners/phase-2-logo.png",
+                "alt": "phase2"
+            }
+        },
+        {
+            "website": "https://www.acquia.com/",
+            "partner": "Acquia",
+            "img": {
+                "src":"../../../../images/sample/partners/acquia-logo.png",
+                "alt": "acquia"
+            }
+        },
+        {
+            "website": "https://www.pantheon.io/",
+            "partner": "Pantheon",
+            "img": {
+                "src":"../../../../images/sample/partners/pantheon-logo.png",
+                "alt": "pantheon"
+            }
+        }
+    ]
+}

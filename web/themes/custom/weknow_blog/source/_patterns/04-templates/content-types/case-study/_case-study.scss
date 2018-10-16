@@ -1,0 +1,59 @@
+.case-study {
+  &__content {
+    background: url("../images/sample/pattern-bg-highligthed.png") repeat;
+    &-wrapper {
+      @include site-container();
+      padding-top: $spacing--l;
+      padding-bottom: $spacing--l;
+      @include breakpoint($bp--medium) {
+        padding-top: ($spacing--l * 2);
+        padding-bottom: ($spacing--l * 2);
+      }
+      h1, h2 {
+        color: $c-blue;
+      }
+      h1 {
+        font-size: $fs--h2;
+        @include breakpoint($bp--medium) {
+          font-size: $fs--h1;
+        }
+      }
+      h2 {
+        font-size: $fs--h3;
+        @include breakpoint($bp--medium) {
+          font-size: $fs--h2;
+        }
+      }
+      > * {
+        @include breakpoint($bp--medium) {
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+      }
+      .embedded-entity {
+        margin-right: -($spacing--l * 2);
+        margin-left: -($spacing--l * 2);
+        @include breakpoint($bp--medium) {
+          padding: ($spacing--l * 2) 0;
+          margin-left: 0;
+          margin-right: 0;
+        }
+        figcaption {
+          margin-top: $spacing--m;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__quote {
+    margin-top: ($spacing--l * 2);
+    @include site-container();
+  }
+
+  &__bottom {
+    padding: ($spacing--l * 2) 0;
+    @include site-container();
+    text-align: center;
+  }
+}

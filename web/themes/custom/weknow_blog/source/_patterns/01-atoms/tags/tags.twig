@@ -1,0 +1,7 @@
+<div class="tags">
+    {% for tag in tags %}
+        {% block tag %}
+        {{ tag }}{% if not loop.last %}{{ ',' }}{% endif %}
+        {% endblock %}
+    {% endfor %}
+</div>

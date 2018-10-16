@@ -1,0 +1,28 @@
+{% embed  "@templates/user.twig" %}
+    {% block profileHero %}
+        {% include "@molecules/hero-profile.twig" with {
+            title: "<strong>Eduardo</strong> García",
+            position: 'CTO WeKnow Inc.',
+            overlay_color: "red-purple-diagonal",
+            img: {
+                src: "../../../../images/sample/profile-header-example.jpg",
+                alt: "Alt"
+            },
+        } %}
+    {% endblock %}
+
+    {% block profileContent %}
+        {% include '@molecules/profile-description.twig' with {
+          social_links: [
+            { url: 'http://facebook.com/weknowinc' },
+            { url: 'http://twitter.com/twitter' },
+            { url: 'http://github.com/weknow' },
+          ],
+          recent_links: [
+            { url: '#', label: 'Lorem ipsum dolor sit amet', created: 1510011601 },
+            { url: '#', label: 'Lorem ipsum dolor sit amet', created: 1510011601 },
+            { url: '#', label: 'Lorem ipsum dolor sit amet', created: 1510011601 },
+          ]
+         } %}
+    {% endblock %}
+{% endembed %}

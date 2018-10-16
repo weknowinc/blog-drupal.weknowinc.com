@@ -1,0 +1,84 @@
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: calc(-100% - 10px);
+  width: 100%;
+  height: 100%;
+  transition: right 0.5s;
+  z-index: 2000;
+  overflow-x: scroll;
+  background-image: linear-gradient(to right bottom , $c-red 60%, $c-purple 100%);
+  &__close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 40px;
+    width: 40px;
+    cursor: pointer;
+    svg {
+      fill: $c-white;
+    }
+  }
+  &__container {
+    position: relative;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-item {
+    display: block;
+    text-align: left;
+    border-bottom: $nav-item-hover-line-size solid transparent;
+    font-weight: lighter;
+
+    @include breakpoint($bp--medium) {
+      margin: $spacing--l;
+    }
+    &__link {
+      @include a-link($link: $c-white, $hover: $c-white, $deco: none, $deco--hover: none);
+      &:hover {
+        font-weight: normal;
+      }
+    }
+    font-size: $fs--h3;
+    @include breakpoint($bp--medium) {
+      font-size: $fs--h2;
+    }
+    font-family: $ff--signika;
+  }
+  .nav-item:last-child{
+    display:none;
+  }
+  &.slideOn {
+    right: 0;
+  }
+  @include breakpoint($bp--medium) { 
+    width: 33%;
+    right: calc(-33% - 10px);
+  }
+
+  .cta {
+    margin-left: ($spacing--m * 5);
+    &__link {
+      padding: $spacing--m;
+      @include a-link($link: $c-red, $hover: $c-red, $deco: none, $deco--hover: "none");
+    }
+    &__color {
+      background: $c-white;
+    }
+  }
+}
+
+.site__left {
+  width: 100%;
+  transition: width 0.5s  ;
+  &.slideOn {
+    width: 0%;
+    @include breakpoint($bp--medium) { 
+      width: 67%;
+    }
+  }
+}

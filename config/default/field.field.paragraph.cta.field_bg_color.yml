@@ -1,0 +1,21 @@
+uuid: 81ddda48-662f-4ff8-90bc-645a781aea8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_color
+    - paragraphs.paragraphs_type.cta
+  module:
+    - options
+id: paragraph.cta.field_bg_color
+field_name: field_bg_color
+entity_type: paragraph
+bundle: cta
+label: 'CTA bg color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

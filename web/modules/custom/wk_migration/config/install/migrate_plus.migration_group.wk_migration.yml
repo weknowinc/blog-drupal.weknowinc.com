@@ -1,0 +1,17 @@
+id: wk_migration
+label: WK migration
+description: Migrates old content.
+
+# source_type: Drupal 6
+
+# The database connection is specified in settings.php using the 'uclaw_drupal6'
+# key.
+shared_configuration:
+  deriver: Drupal\node\Plugin\migrate\D6NodeDeriver
+  source:
+    plugin: d6_node
+    key: wk_migration
+    track_changes: true
+
+  destination:
+    plugin: entity:node

@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "name": "$ff--signika",
+      "value": "'signika', sans-serif",
+      "comment": ""
+    },
+    {
+      "name": "$ff--poppins",
+      "value": "'poppins', sans-serif",
+      "comment": ""
+    },
+    {
+      "name": "$ff--josefin",
+      "value": "'Josefin Sans', sans-serif",
+      "comment": ""
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$ff--</code> in <code>source/_patterns/00-base/15-typography/fonts/_fonts.scss</code>"
+  }
+}

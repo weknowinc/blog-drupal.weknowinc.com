@@ -1,0 +1,6 @@
+{
+  "imageStyleName":"imageHero",
+  "overlayColor": "red-purple-diagonal",
+  "type":"image",
+  "caption": true
+}

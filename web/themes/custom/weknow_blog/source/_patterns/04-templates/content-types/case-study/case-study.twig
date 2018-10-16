@@ -1,0 +1,26 @@
+<div class="case-study">
+    <div class="case-study__hero clear-both">
+        {% block caseStudyHero %}
+            {% include "@molecules/hero.twig"  %}
+        {% endblock %}
+    </div>
+    <div class="case-study__content clear-both">
+        <div class="case-study__content-wrapper">
+            {% block caseStudyContent %}
+                <h2>Case Study Content Highlighted goes here</h2>
+            {% endblock %}
+        </div>
+    </div>
+    {% if caseStudyQuote %}
+    <div class="case-study__quote clear-both">
+        {% block caseStudyQuote %}
+            {% include "@molecules/quote.twig" %}
+        {% endblock %}
+    </div>
+    {% endif %}
+    <div class="case-study__bottom clear-both">
+        {% block caseStudyBottom %}
+            {% include "@atoms/_cta.twig" %}
+        {% endblock %}
+    </div>
+</div>

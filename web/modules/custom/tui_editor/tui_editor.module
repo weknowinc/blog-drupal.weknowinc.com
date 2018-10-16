@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains tui_editor.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tui_editor_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the editor_md module.
+    case 'help.page.tui_editor':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('It&#039;s a great markdown editor.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function tui_editor_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id) {
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->getType()==='article' || $node->getType()==='page') {
+    $form['body']['#attributes']['class'][] = 'hidden';
+    $form['body']['#prefix'] = '<div id="node-edit-form-textarea-wrapper">';
+    $form['body']['#suffix'] = '</div>';
+  }
+}

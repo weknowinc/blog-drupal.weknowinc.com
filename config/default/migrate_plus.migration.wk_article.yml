@@ -1,0 +1,61 @@
+uuid: 05f59ca7-4280-4d88-85f5-5a6807734612
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-wEydXUN0jtNJY2ZBl5bxXgmxnw1hs-eAY41kFWr6DI'
+id: wk_article
+migration_tags: null
+migration_group: wk_migration
+label: 'Article nodes'
+source:
+  plugin: wk_d8_node
+  node_type: article
+process:
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  created: created
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  title: title
+  type:
+    plugin: default_value
+    default_value: article
+  uid:
+    plugin: default_value
+    default_value: 4
+  status: status
+  sticky: sticky
+  field_domain_access:
+    plugin: default_value
+    default_value: jmolivas_weknowinc_com
+  body/value: body_value
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  field_tags:
+    -
+      plugin: iterator
+      source: field_tags
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            migration: wk_tags
+            no_stub: true
+            source: field_tags_target_id
+  field_image:
+    plugin: migration_lookup
+    migration: wk_files
+    no_stub: true
+    source: field_image/0/field_image_target_id
+  path/alias: path/0/alias
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - wk_files
+    - wk_tags

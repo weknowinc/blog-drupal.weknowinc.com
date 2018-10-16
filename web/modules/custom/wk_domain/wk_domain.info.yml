@@ -1,0 +1,7 @@
+name: wk_domain
+type: module
+description: WeKnow custom domain code
+core: 8.x
+package: Custom
+dependencies:
+  - domain

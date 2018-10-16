@@ -1,0 +1,21 @@
+<div class="card card__type--{{ type }}">
+    {% if url %}<a href="{{ url }}" class="card__link" >{% endif %}
+    {% if type == 'blog' %}
+        <div class="card__image">
+        {% block image %}
+            {% include "@atoms/_img.twig" %}
+        {% endblock %}
+        </div>
+    {% endif %}
+    <div class="card__title {% if color %}card__color card__color--{{ color }} {% endif %}">{{ title }}</div>
+    {% if subtitle %}<div class="card__subtitle {% if color %}card__color card__color--{{ color }} {% endif %}">{{ subtitle }}</div>{% endif %}
+    <div class="card__text">{{ text }}</div>
+    {% if type == 'blog' %}
+        <div class="card__more">
+        {% block more %}
+            <a href="{{ path }}"><small>- READ MORE</small></a>
+        {% endblock %}
+        </div>
+    {% endif %}
+    {% if url %}</a>{% endif %}
+</div>

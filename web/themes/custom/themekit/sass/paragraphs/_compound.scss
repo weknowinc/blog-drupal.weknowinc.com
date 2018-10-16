@@ -1,0 +1,59 @@
+////
+/// Paragraphs - Compound
+////
+
+// Compound - Media Bar
+.paragraph--type--compound-media-bar {
+  // layout
+  .compound-media-bar {
+    @include breakpoint(medium) {
+      display: flex;
+    }
+    .compound-media-bar__content {
+      @include breakpoint(medium) {
+        flex: 0 0 50%;
+        max-width: 50%; // for IE11
+        display: flex;
+      }
+      .compound-media-bar__content-wrapper {
+        @include breakpoint(medium) {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          & > .field {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .compound-media-bar__media {
+      position: relative;
+      z-index: z(above);
+      @include breakpoint(medium) {
+        flex: 0 0 50%;
+        max-width: 50%; // for IE11
+        display: flex;
+        align-items: center;
+      }
+      .field--name-field-p-media-item {
+        width: 100%;
+      }
+    }
+  }
+  &.media-position-left {
+    .compound-media-bar__media {
+      @include breakpoint(medium) {
+        order: -1;
+      }
+    }
+  }
+  &.media-position-right {
+    .compound-media-bar__media {
+      @include breakpoint(medium) {
+        order: 2;
+      }
+    }
+  }
+
+  // style
+}

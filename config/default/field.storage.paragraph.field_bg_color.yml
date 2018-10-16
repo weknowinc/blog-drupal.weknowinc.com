@@ -1,0 +1,33 @@
+uuid: 2cd50982-8dae-47cd-8559-d8481dbabc31
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_bg_color
+field_name: field_bg_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: purple
+      label: Purple
+    -
+      value: red
+      label: Red
+    -
+      value: blue
+      label: Blue
+    -
+      value: orange
+      label: Orange
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

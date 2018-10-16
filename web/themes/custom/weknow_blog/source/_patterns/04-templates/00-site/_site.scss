@@ -1,0 +1,27 @@
+.site {
+  &__header {}
+  &__page {
+  }
+  &-content {
+  }
+  &__footer {}
+}
+.region-highlighted {
+  background: url("../../../../images/sample/pattern-bg-highligthed.png") repeat;
+  &__wrapper {
+    @include site-container();
+  }
+}
+
+.region-content {
+  &__wrapper {
+    @include site-container();
+  }
+}
+.region-bottom {
+  padding: ($spacing--l * 2) 0;
+  &__wrapper {
+    @include site-container();
+    text-align: center;
+  }
+}

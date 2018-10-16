@@ -1,0 +1,37 @@
+{
+    "images":[
+        {
+            "imageStyleName":"imageHero",
+            "caption": false
+        },
+        {
+            "imageStyleName":"imageHero",
+            "type":"image",
+            "caption": true
+        },
+        {
+            "imageStyleName":"imageHero",
+            "text":"Don't forget to tell these special people in your life just how special they are to you.",
+            "type":"text",
+            "caption": true
+        },
+        {
+            "imageStyleName":"imageHero",
+            "overlayColor": "orange-red-diagonal",
+            "caption": false
+        },
+        {
+            "imageStyleName":"imageHero",
+            "overlayColor": "red-purple-diagonal",
+            "type":"image",
+            "caption": true
+        },
+        {
+            "imageStyleName":"imageHero",
+            "overlayColor": "blue-red-diagonal",
+            "type":"text",
+            "text":"Don't forget to tell these special people in your life just how special they are to you.",
+            "caption": true
+        }
+    ]
+}

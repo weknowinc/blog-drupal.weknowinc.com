@@ -1,0 +1,18 @@
+<div class="image-caption">
+    <div class="image-caption__background-image">
+        <figure class="image-caption__tint image-caption__tint-{{ overlayColor }}">
+            {% block image %}
+            {% include "@atoms/_img.twig" %}
+            {% endblock %}
+        </figure>
+        {% if caption %}
+        <div class="image-caption__caption image-caption__caption-type-{{ type }}">
+            {% block caption %}
+                {% include "@molecules/caption.twig" with {
+                 imageStyleName:"imageForCaption",
+                }%}
+            {% endblock %}
+        </div>
+        {% endif %}
+    </div>
+</div>

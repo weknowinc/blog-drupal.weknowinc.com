@@ -1,0 +1,88 @@
+.image-caption {
+  position: relative;
+
+  &__background-image {
+    > figure {
+      margin: 0;
+      padding: 0;
+      min-height: 300px;
+      > img {
+        width: 100%;
+        object-fit: cover;
+        min-height: 300px;
+      }
+    }
+  }
+
+  &__tint {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0);
+      opacity: 0.7;
+      transition: background 0.3s linear;
+    }
+
+    &-red::before {
+      background: $c-red;
+    }
+
+    &-purple::before {
+      background: $c-purple;
+    }
+
+    &-blue::before {
+      background: $c-blue;
+    }
+
+    &-orange::before {
+      background: $c-orange;
+    }
+
+    &-red-purple-diagonal::before {
+      @include linear-gradient($c-red, $c-purple, -45deg);
+    }
+
+    &-orange-red-diagonal::before {
+      @include linear-gradient($c-orange, $c-red, -45deg);
+    }
+
+    &-blue-red-diagonal::before {
+      @include linear-gradient($c-blue, $c-red, -45deg);
+    }
+
+    &-purple-blue::before {
+      @include linear-gradient($c-purple, $c-blue);
+    }
+
+    &-red-orange::before {
+      @include linear-gradient($c-red, $c-orange);
+    }
+
+    &-blue-orange::before {
+      @include linear-gradient($c-blue, $c-orange);
+    }
+  }
+
+  &__caption {
+    @include center ($absolute: true, $vertically: false);
+    top: 50%;
+    width: 80%;
+    @include breakpoint($bp--small) {
+      width: auto;
+    }
+  }
+
+  &__caption-type-text {
+    @include breakpoint($bp--xlarge) {
+      left: calc(50% - 385px);
+    }
+  }
+}

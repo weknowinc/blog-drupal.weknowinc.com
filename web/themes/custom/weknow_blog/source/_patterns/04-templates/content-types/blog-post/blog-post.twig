@@ -1,0 +1,49 @@
+<div class="blog-post">
+    <div class="blog-post__hero clear-both">
+        {% block blogPostHero %}
+            {% include "@molecules/hero.twig" with{
+            heroTitle: "This is a <strong>blog post</strong>",
+            byLine:true
+            } %}
+        {% endblock %}
+    </div>
+    <div class="blog-post__content clear-both">
+        {% block blogPostContent %}
+            <h2>Blog post Content goes here</h2>
+        {% endblock %}
+    </div>
+    {% if blogPostRelated %}
+        <div class="blog-post__related-post clear-both">
+            {% block blogPostRelated %}
+                {% embed '@base/_smart-grid.twig' with {
+                rowItems: {
+                small: 1,
+                large: 3,
+                }
+                } %}
+                    {% block gridItems %}
+                        {% include "@molecules/card.twig"%}
+                        {% include "@molecules/card.twig"%}
+                        {% include "@molecules/card.twig"%}
+                    {% endblock %}
+                {% endembed %}
+            {% endblock %}
+        </div>
+    {% endif %}
+    <div class="blog-post__disqus clear-both">
+        {% block blogPostDisqus %}
+            {% include "@molecules/disqus.twig" with{
+            forumShortname:"example",
+            pageId:"2",
+            pageUrl:"https://drupalconsole.com"
+            }%}
+        {% endblock %}
+    </div>
+    <div class="blog-post__bottom clear-both">
+        {% block blogPostBottom %}
+            <h2>Blog Post Bottom goes here</h2>
+        {% endblock %}
+    </div>
+</div>
+
+

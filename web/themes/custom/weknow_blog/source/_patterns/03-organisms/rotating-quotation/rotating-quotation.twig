@@ -1,0 +1,9 @@
+<div class="rotating-quotation">
+    {% for quote in quotes %}
+        <div class="rotating-quotation__item">
+            {% block quote %}
+                {% include "@molecules/quote.twig" with quote %}
+            {% endblock %}
+        </div>
+    {% endfor %}
+</div>

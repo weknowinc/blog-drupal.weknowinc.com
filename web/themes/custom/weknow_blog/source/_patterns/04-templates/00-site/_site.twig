@@ -1,0 +1,9 @@
+<div class="site">
+  {% include "@organisms/site-header.twig" %}
+  <main class="site__page page{% if sidebar %} page--has-sidebar{% endif %}">
+    <div class="page__content">
+      {{ content }}
+    </div>
+  </main>
+  {% include "@organisms/site-footer.twig" %}
+</div>

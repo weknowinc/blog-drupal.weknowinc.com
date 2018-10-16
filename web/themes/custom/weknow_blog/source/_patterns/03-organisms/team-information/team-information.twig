@@ -1,0 +1,31 @@
+<div class="team-information">
+    <div class="team-information__section team-information__team-members">
+        <div class="team-information__team-members-info">
+            <div class="team-information__team-members-count">{{ teamMembers }}</div>
+            <div class="team-information__team-members-icon"><i class="icon--team"></i></div>
+        </div>
+    </div>
+    <div class="team-information__section team-information__team-countries">
+        <div class="team-information__team-countries-info">
+            <div class="team-information__team-countries-icon"><i class="icon--pin"></i></div>
+            <div class="team-information__team-countries-count">
+                <div class="counter">{{ teamCountries }}</div>
+                <p>COUNTRIES</p>
+            </div>
+        </div>
+    </div>
+    <div class="team-information__section team-information__team-events">
+        <div class="team-information__team-events-info">
+            <div class="team-information__team-events-header"><span class="separator"></span><i class="icon--building"></i><span class="separator"></span></div>
+            <div class="team-information__team-events-content">
+                <h3>MEET US AT</h3>
+                {% for event in events %}
+                    <a href="{{ event.link }}" target="_blank">
+                        <p>{{ event.name }}</span> &#9679; <span>{{ event.date }}</p>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="team-information__team-events-footer"><span class="separator"></span><i class="icon--building"></i><span class="separator"></span></div>
+        </div>
+    </div>
+</div>

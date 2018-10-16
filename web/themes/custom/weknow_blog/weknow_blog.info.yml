@@ -1,0 +1,88 @@
+name: Weknowinc Blog Theme
+type: theme
+description: Weknoinc blog theme
+base theme: stable
+core: 8.x
+libraries:
+  - weknow_blog/core
+regions:
+  header: Header
+  content: Content
+  sidebar_first: Sidebar first
+  footer: Footer
+component-libraries:
+  svgs:
+    paths:
+      - images/svgs
+  base:
+    paths:
+      - source/_patterns/00-base
+      - source/_patterns/00-base/05-colors
+      - source/_patterns/00-base/10-spacing
+      - source/_patterns/00-base/15-typography/fonts
+      - source/_patterns/00-base/15-typography/headings
+      - source/_patterns/00-base/15-typography/lists
+      - source/_patterns/00-base/15-typography/text
+      - source/_patterns/00-base/animations/01-transitions
+      - source/_patterns/00-base/breakpoints
+      - source/_patterns/00-base/grids
+      - source/_patterns/00-base/utilities/borders
+  atoms:
+    paths:
+      - source/_patterns/01-atoms
+      - source/_patterns/01-atoms/buttons
+      - source/_patterns/01-atoms/by-line
+      - source/_patterns/01-atoms/cta
+      - source/_patterns/01-atoms/images
+      - source/_patterns/01-atoms/nav-item
+      - source/_patterns/01-atoms/profile-position
+      - source/_patterns/01-atoms/related-line
+      - source/_patterns/01-atoms/social-links
+      - source/_patterns/01-atoms/tags
+  molecules:
+    paths:
+      - source/_patterns/02-molecules
+      - source/_patterns/02-molecules/caption
+      - source/_patterns/02-molecules/card
+      - source/_patterns/02-molecules/disqus
+      - source/_patterns/02-molecules/event
+      - source/_patterns/02-molecules/google-analytics
+      - source/_patterns/02-molecules/hero
+      - source/_patterns/02-molecules/image-caption
+      - source/_patterns/02-molecules/intro
+      - source/_patterns/02-molecules/navigation
+      - source/_patterns/02-molecules/partner
+      - source/_patterns/02-molecules/post-teaser
+      - source/_patterns/02-molecules/profile-description
+      - source/_patterns/02-molecules/quote
+      - source/_patterns/02-molecules/social-share-tooltip
+      - source/_patterns/02-molecules/team-member
+  organisms:
+    paths:
+      - source/_patterns/03-organisms
+      - source/_patterns/03-organisms/blog-grid
+      - source/_patterns/03-organisms/content
+      - source/_patterns/03-organisms/event-grid
+      - source/_patterns/03-organisms/events
+      - source/_patterns/03-organisms/grid-card
+      - source/_patterns/03-organisms/image-slider
+      - source/_patterns/03-organisms/navbar
+      - source/_patterns/03-organisms/partners
+      - source/_patterns/03-organisms/presentation-grid
+      - source/_patterns/03-organisms/rotating-quotation
+      - source/_patterns/03-organisms/sidebar
+      - source/_patterns/03-organisms/site/site-footer
+      - source/_patterns/03-organisms/site/site-header
+      - source/_patterns/03-organisms/team-information
+      - source/_patterns/03-organisms/team
+  templates:
+    paths:
+      - source/_patterns/04-templates
+      - source/_patterns/04-templates/00-site
+      - source/_patterns/04-templates/content-types/blog-post
+      - source/_patterns/04-templates/content-types/case-study
+      - source/_patterns/04-templates/content-types/landing-page
+      - source/_patterns/04-templates/content-types/user
+  pages:
+    paths:
+      - source/_patterns/05-pages

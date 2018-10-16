@@ -1,0 +1,4 @@
+local:
+  root: /var/www/html
+  extra-options: docker-compose exec --user=82 php
+  type: container

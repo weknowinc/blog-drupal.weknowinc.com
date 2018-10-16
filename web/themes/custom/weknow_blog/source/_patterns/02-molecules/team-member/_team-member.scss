@@ -1,0 +1,53 @@
+.team-member {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  margin-bottom: $spacing--l;
+  clear: both;
+
+  &:hover {
+    img {
+      filter: none;
+    }
+  }
+
+  &__profile {
+
+    img {
+      filter: grayscale(100%);
+      width: 100%;
+      transition: all 1s ease;
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;    
+    padding: 13px;
+    @include linear-gradient($c-white, $c-transparent, 0deg);
+    
+    &-text {
+      display: block;
+      color: $c-black;
+    }
+
+    .name {
+      font-size: $fs--s;
+      font-family: $ff--signika;
+      font-weight: bold;
+      @include breakpoint($bp--large) {
+        font-size: $fs--xl;
+      }
+    }
+
+    .jobtitle {
+      font-size: $fs--xs;
+      @include breakpoint($bp--large) {
+        font-size: $fs--l;
+      }
+    }
+  }
+}

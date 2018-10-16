@@ -1,0 +1,10 @@
+{
+  "type":"blog",
+  "color":"none",
+  "imageStyleName":"imageRelatedPost",
+  "title": "Web Development",
+  "subtitle": false,
+  "text": "This is a sample for the news component. You can add a description for this news item to explain where the link goes on.",
+  "url":false,
+  "path":"#"
+}

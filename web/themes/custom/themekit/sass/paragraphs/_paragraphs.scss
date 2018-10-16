@@ -1,0 +1,33 @@
+////
+/// Paragraphs - Universal Styles
+/// Global implementation based styles may go here (field based) as well as some global patterns
+/// leveraged generally throughout all components (ie - a general component "header" or "with-bg" style).
+////
+
+// All top level, page based paragraph field classes should go here. Handles default paragraph rhythm.
+// TODO: Default example global spacing style, you may remove or keep once you start a new project.
+.field--name-field-p-content {
+  & > .paragraph {
+    @include top-bottom(margin, $paragraphs-default-spacing);
+    @include content-width(default);
+  }
+}
+
+// TODO: A couple example global paragraph styles to handle general background styles and a global header component, remove/replace on new project.
+.paragraph {
+  //&.with-bg {
+  //  position: relative;
+  //  z-index: z(default);
+  //  margin: 0;
+  //  @include top-bottom(padding, $paragraphs-default-spacing);
+  //}
+
+  //.paragraph-header {
+  //  margin-bottom: rem-calc(64);
+  //  @include content-width(small);
+  //  text-align: center;
+  //  .field--name-field-description {
+  //    @include header-font-size(h4);
+  //  }
+  //}
+}

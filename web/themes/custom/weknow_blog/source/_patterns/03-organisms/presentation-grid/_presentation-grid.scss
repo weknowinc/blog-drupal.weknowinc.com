@@ -1,0 +1,23 @@
+.presentation-grid {
+  @include linear-gradient($c-blue, $c-red);
+  &__wrapper {
+    @include site-container();
+  }
+
+  header {
+    color: $c-white;
+    @include site-container();
+    text-align: center;
+    h3 {
+      margin: 0;
+      padding: ($spacing--l * 3) 0 $spacing--l;
+    }
+    p {
+      padding: $spacing--l 0 ($spacing--l * 3);
+    }
+  }
+
+  .smart-grid[data-row-items-large="3"] > * {
+    margin-bottom: ($spacing--l * 4);
+  }
+}

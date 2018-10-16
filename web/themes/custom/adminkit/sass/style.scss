@@ -1,0 +1,15 @@
+@import "base/helpers";
+@import "base/variables";
+@import "base/animation";
+
+// Paragraphs styles
+@import "partials/paragraphs-styles";
+@import "partials/paragraphs-draggable-styles";
+@import "partials/paragraphs-previewer-styles";
+@import "partials/admin-tabs";
+
+// Entity browser styles
+@import "partials/entity-browsers";
+
+// Adjust node edit pages
+@import "partials/node-edit-pages";

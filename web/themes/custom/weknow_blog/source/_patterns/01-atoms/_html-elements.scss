@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+// IE 11 fix ~ http://stackoverflow.com/a/26207036
+main {
+  display: block;
+  padding-top: 100px;
+  @include breakpoint($bp--medium) {
+    padding-top: 0px;
+  }
+}
+
+// All last children
+:last-child {
+  margin-bottom: 0;
+}
+
+// all last children with a class
+[class]:last-child {
+  margin-bottom: 0;
+}
+

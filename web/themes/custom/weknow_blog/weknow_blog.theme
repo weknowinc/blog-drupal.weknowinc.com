@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Pattern Lab theme.
+ */
+function weknow_blog_preprocess_page(array &$variables) {
+
+
+    // Prepare the intro values
+    $variables['intro_logo'] = file_url_transform_relative(file_create_url(theme_get_setting('intro_logo', 'weknow_blog')));
+    $variables['quotes'] = theme_get_setting('quotes', 'weknow_blog');
+    // Prepare the footer values
+    $variables['footer_logo'] = file_url_transform_relative(file_create_url(theme_get_setting('footer_logo', 'weknow_blog')));
+    $variables['copyright'] = theme_get_setting('copyright', 'weknow_blog');
+    $variables['facebook_link'] = theme_get_setting('facebook_link', 'weknow_blog');
+    $variables['twitter_link'] = theme_get_setting('twitter_link', 'weknow_blog');
+    // Prepare the phone contact values
+    $variables['us_phone'] = theme_get_setting('us_phone', 'weknow_blog');
+    $variables['cr_phone'] = theme_get_setting('cr_phone', 'weknow_blog');
+    $variables['mx_phone'] = theme_get_setting('mx_phone', 'weknow_blog');
+    $variables['au_phone'] = theme_get_setting('au_phone', 'weknow_blog');
+}

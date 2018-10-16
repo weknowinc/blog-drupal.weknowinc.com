@@ -1,0 +1,81 @@
+{% extends "@templates/site-layout.twig"%}
+{% block content %}
+    {% embed  "@templates/landing-page.twig" %}
+        {% block landingTop %}
+            {% include "@molecules/intro.twig" with{
+            img:{
+            src : '../../../../images/sample/weknow-logo-white.png',
+            alt: 'Logo intro'
+            },
+            quotes: 'Consulting, Theming, Development',
+            } %}
+            {% include "@organisms/image-slider.twig" with {
+            images:[
+            {
+            imageStyleName:"imageHero",
+            caption: false
+            },
+            {
+            imageStyleName:"imageHero",
+            type:"image",
+            caption: true
+            }
+            ]
+            }%}
+        {% endblock %}
+
+        {% block landingHighlighted %}
+            {% include "@organisms/rotating-quotation.twig" %}
+            {% embed '@base/_smart-grid.twig' with {
+            classes: "content-three-col",
+            rowItems: {
+            small: 1,
+            large: 3,
+            }
+            } %}
+                {% block gridItems %}
+                    <div class="content-three-col__item content-60-40-two-col__item-first">
+                        {% embed "@molecules/card.twig" with {
+                        title: "Nearshore Staffing",
+                        resume: "<p>Have experts work directly involved in your proyect.</p><p>Drupal Backend, Frontend, Site Building, QA/Testing.</p>",
+                        color:"red"
+                        } %}
+                        {% endembed %}
+                    </div>
+                    <div class="content-60-40-two-col__item content-60-40-two-col__item-second">
+                        {% embed "@molecules/card.twig" with {
+                        title: "Web Development",
+                        resume: "<p>Consulting services to take a project from start to end.</p><p>Planning, Desing, Coding QA/Testing</p>",
+                        color:"purple"
+                        } %}
+                        {% endembed %}
+                    </div>
+                    <div class="content-60-40-two-col__item content-60-40-two-col__item-last">
+                        {% embed "@molecules/card.twig" with {
+                        title: "Training On-demand",
+                        resume: "<p>Whether you nedd a train your staff of client, we can help.</p><p>Drupal 8, Drupal Console, Twig, etc.</p>",
+                        color:"blue"
+                        } %}
+                        {% endembed %}
+                    </div>
+
+                {% endblock %}
+            {% endembed %}
+        {% endblock %}
+
+        {% block landingContent %}
+            {% include "@organisms/partners.twig" %}
+        {% endblock %}
+
+        {% block landingBottom %}
+            {% include "@atoms/cta.twig" with {
+            bgColor: "purple",
+            richText: "<span>Read more about <strong>Our approach</strong></span>",
+            link: {
+            text: "This is a click to action",
+            url: "#"
+            }
+            } %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

@@ -1,0 +1,22 @@
+uuid: dc6fc657-c574-4725-a238-525bc5510b91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.plugin_block.field_plugin_block
+    - paragraphs.paragraphs_type.plugin_block
+  module:
+    - block_field
+id: paragraph.plugin_block.default
+targetEntityType: paragraph
+bundle: plugin_block
+mode: default
+content:
+  field_plugin_block:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden: {  }

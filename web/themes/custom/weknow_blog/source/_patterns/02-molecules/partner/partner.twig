@@ -1,0 +1,9 @@
+<div class="partner">
+    {% if website %}<a href="{{ website }}" class="partner__link">{% endif %}
+        <div class="partner__image">
+        {% block image %}
+                {% include "@atoms/_img.twig" %}
+        {% endblock %}
+        </div>
+    {% if website %}</a>{% endif %}
+</div>

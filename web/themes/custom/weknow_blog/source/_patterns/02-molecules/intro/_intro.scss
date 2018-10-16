@@ -1,0 +1,53 @@
+.intro {
+  @include linear-gradient($c-purple, $c-red, -30deg);
+  position: relative;
+  display: block;
+  min-height: 250px;
+
+  @include breakpoint($bp--medium) {
+    min-height: 440px;
+  }
+
+  @include breakpoint($bp--large) {
+    min-height: 690px;
+  }
+
+
+  &__logo {
+    @include center($horizontally: true, $vertically: true, $absolute: true, $undo: false);
+    left: calc(50% - 56px);
+    width: 170px;
+
+    @include breakpoint($bp--medium) {
+      left: calc(50% - 150px);
+      width: auto;
+    }
+  }
+
+  &__quotes {
+    @include center($horizontally: true, $vertically: true, $absolute: true, $undo: false);
+    width: 160px;
+    left : calc(50% + 116px);
+    margin-top: 8px;
+
+    @include breakpoint($bp--medium) {
+      margin-top: 15px;
+      width: 300px;
+      left: calc(50% + 160px);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    h2 span {
+      vertical-align: middle;
+      color: $c-white;
+      font-size: $fs--xxs;
+      font-weight: lighter;
+      @include breakpoint($bp--medium) {
+        font-size: $fs--h2;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.team {
+  padding: ($spacing--l * 3) 0 0;
+
+  //.smart-grid > div:first-child {
+  //  @include breakpoint($bp--medium) {
+  //    margin-top: ($spacing--m + $spacing--l);
+  //  }
+  //}
+  //
+  //.smart-grid > div:nth-child(2) {
+  //  @include breakpoint($bp--medium) {
+  //    margin-top: ($spacing--l * 3);
+  //  }
+  //}
+}
+//Styles for view drupal
+.view-team {
+  header {
+    text-align: center;
+    h3 {
+      font-weight: lighter;
+      margin: 0;
+      font-size: $fs--s;
+      @include breakpoint($bp--medium) {
+        font-size: $fs--h3;
+      }
+    }
+  }
+}

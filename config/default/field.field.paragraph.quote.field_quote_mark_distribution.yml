@@ -1,0 +1,21 @@
+uuid: 5f13f478-1310-4d4e-b764-2dc6c452a814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_mark_distribution
+    - paragraphs.paragraphs_type.quote
+  module:
+    - options
+id: paragraph.quote.field_quote_mark_distribution
+field_name: field_quote_mark_distribution
+entity_type: paragraph
+bundle: quote
+label: 'Quote Mark Distribution'
+description: 'Please select a distribution for quote mark.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

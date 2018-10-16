@@ -1,0 +1,111 @@
+uuid: 33b00c3a-62cc-4755-8bb5-e0f256223924
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.paragraph.caption.field_cta
+    - field.field.paragraph.caption.field_image
+    - field.field.paragraph.caption.field_text
+    - paragraphs.paragraphs_type.caption
+  module:
+    - entity_browser
+    - field_group
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_text
+        - group_image
+        - group_cta
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_text:
+      children:
+        - field_text
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: false
+      label: Text
+    group_image:
+      children:
+        - field_image
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Image
+    group_cta:
+      children:
+        - field_cta
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: CTA
+id: paragraph.caption.default
+targetEntityType: paragraph
+bundle: caption
+mode: default
+content:
+  field_cta:
+    type: entity_reference_paragraphs
+    weight: 22
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 2
+    settings:
+      entity_browser: image_browser
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      preview_image_style: thumbnail
+      field_widget_edit: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_browser_file
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

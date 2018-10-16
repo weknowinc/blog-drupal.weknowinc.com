@@ -1,0 +1,27 @@
+uuid: 8c9c09bf-5146-4b0c-b9b8-6c8cab2c5f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_post
+    - node.type.article
+id: node.article.field_related_post
+field_name: field_related_post
+entity_type: node
+bundle: article
+label: 'Related Post'
+description: 'Use this field to relate other blog post for this content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

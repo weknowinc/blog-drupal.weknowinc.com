@@ -1,0 +1,36 @@
+<div class="landing-page">
+    {% if landingTop %}
+    <div class="landing-page__top clear-both">
+        {% block landingTop %}
+            <h2>Landing Content Top goes here</h2>
+        {% endblock %}
+    </div>
+    {% endif %}
+    {% if landingHighlighted %}
+    <div class="landing-page__highlighted clear-both">
+        <div class="landing-page__highlighted-wrapper">
+        {% block landingHighlighted %}
+            <h2>Landing Content Highlighted goes here</h2>
+        {% endblock %}
+        </div>
+    </div>
+    {% endif %}
+    {% if landingContent %}
+    <div class="landing-page__middle clear-both">
+        <div class="landing-page__middle-wrapper">
+        {% block landingContent %}
+            <h2>Landing Content Middle goes here</h2>
+        {% endblock %}
+        </div>
+    </div>
+    {% endif %}
+    {% if landingBottom %}
+    <div class="landing-page__bottom clear-both">
+        {% block landingBottom %}
+            <h2>Landing Content Bottom goes here</h2>
+        {% endblock %}
+    </div>
+    {% endif %}
+</div>
+
+

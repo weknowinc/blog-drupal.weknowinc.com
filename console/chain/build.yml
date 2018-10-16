@@ -1,0 +1,12 @@
+command:
+  name: build
+  description: 'Build site'
+commands:
+  #Import configuration
+  - command: config:import
+    options:
+      skip-uuid: true
+  # Rebuild caches.
+  - command: cache:rebuild
+    arguments:
+        cache: all

@@ -1,0 +1,43 @@
+uuid: 875d4b9f-a3bc-4969-b254-c2dbc9eecf96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.40_60_two_column_content.field_content_40
+    - field.field.paragraph.40_60_two_column_content.field_content_60
+    - paragraphs.paragraphs_type.40_60_two_column_content
+  module:
+    - paragraphs
+id: paragraph.40_60_two_column_content.default
+targetEntityType: paragraph
+bundle: 40_60_two_column_content
+mode: default
+content:
+  field_content_40:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_content_60:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

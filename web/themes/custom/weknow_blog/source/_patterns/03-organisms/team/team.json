@@ -1,0 +1,66 @@
+{
+  "team": [
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "John Doe Alt Text"
+      },
+      "name": "John Doe",
+      "jobtitle": "CEO / Co Founder"
+    },
+
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "Jack Doe Alt Text"
+      },
+      "name": "Jack Doe",
+      "jobtitle": "CTO / Co Founder"
+    },
+
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "Jimmy Doe Alt Text"
+      },
+      "name": "Jimmy Doe",
+      "jobtitle": "Head of Products / Co Founder"
+    },
+
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "Jason Doe Alt Text"
+      },
+      "name": "Jason Doe",
+      "jobtitle": "Director of DevOps"
+    },
+
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "Jack Doe Alt Text"
+      },
+      "name": "Jack Doe",
+      "jobtitle": "Capability Manager"
+    },
+
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "Jane Alt Text"
+      },
+      "name": "Jane Doe",
+      "jobtitle": "Director of Operations"
+    },
+
+    {
+      "profile": {
+        "src": "../../../../images/sample/profilepic-example.png",
+        "alt": "Jenny Doe Alt Text"
+      },
+      "name": "Jenny Doe",
+      "jobtitle": "People Operations Manager"
+    }
+  ]
+}
