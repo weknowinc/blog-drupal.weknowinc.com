@@ -4,6 +4,7 @@ services:
   mariadb_jmolivas:
     image: wodby/mariadb:10.2-3.1.3
     env_file: ./.env
+    restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'true'
       MYSQL_DATABASE: ${DATABASE_NAME_JMOLIVAS}
@@ -21,6 +22,7 @@ services:
   mariadb_enzo:
     image: wodby/mariadb:10.2-3.1.3
     env_file: ./.env
+    restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'true'
       MYSQL_DATABASE: ${DATABASE_NAME_ENZO}
@@ -38,8 +40,8 @@ services:
   php:
     image: wodby/drupal-php:7.2-4.7.5
     env_file: ./.env
+    restart: always
     environment:
-      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       ENVIRONMENT: ${ENVIRONMENT}
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_NAME_JMOLIVAS: ${DATABASE_NAME_JMOLIVAS}
@@ -62,6 +64,10 @@ services:
   nginx:
     image: wodby/drupal-nginx:8-1.13-4.0.3
     env_file: ./.env
+    restart: always
+    networks:
+      - web
+      - default
     depends_on:
       - php
     environment:
@@ -73,20 +79,37 @@ services:
       - ./:${DRUPAL_ROOT}:delegated
     labels:
       - 'traefik.backend=nginx'
-      - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:${URL_SITE_JMOLIVAS}, ${URL_SITE_ENZO}'
+      - "traefik.docker.network=web"
+      - 'traefik.enable=true'
+      - 'traefik.jmolivas.port=80'
+      - 'traefik.jmolivas.frontend.rule=Host:${URL_SITE_JMOLIVAS}'
+      - "traefik.jmolivas.frontend.redirect.regex=^https?://www.${URL_SITE_JMOLIVAS}/(.*)"
+      - "traefik.jmolivas.frontend.redirect.replacement=https://${URL_SITE_JMOLIVAS}/$${1}"
+      - 'traefik.enzo.port=80'
+      - 'traefik.enzo.frontend.rule=Host:${URL_SITE_ENZO}'
+      - "traefik.enzo.frontend.redirect.regex=^https?://www.${URL_SITE_ENZO}/(.*)"
+      - "traefik.enzo.frontend.redirect.replacement=https://${URL_SITE_ENZO}/$${1}"
 
   traefik:
-    image: traefik
-    env_file: ./.env
-    command: -c /dev/null --web --docker --logLevel=INFO
+    image: traefik:1.6-alpine
+    restart: always
+    networks:
+      - web
+      - default
     ports:
       - '80:80'
+      - '443:443'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ../traefik/traefik.toml:/etc/traefik/traefik.toml
+      - ../traefik/acme.json:/etc/traefik/acme.json
 
 volumes:
   mariadb_enzo:
     driver: "local"
   mariadb_jmolivas:
     driver: "local"
+
+networks:
+  web:
+    external: true

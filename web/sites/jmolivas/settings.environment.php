@@ -29,9 +29,9 @@ if (file_exists($settingsFile)) {
 }
 
 $databases['default']['default'] = array (
-    'database' =>  getenv('DATABASE_NAME'),
-    'username' => getenv('DATABASE_USER'),
-    'password' => getenv('DATABASE_PASSWORD'),
+    'database' =>  getenv('DATABASE_NAME_JMOLIVAS'),
+    'username' => getenv('DATABASE_USER_JMOLIVAS'),
+    'password' => getenv('DATABASE_PASSWORD_JMOLIVAS'),
     'prefix' => '',
     'host' => getenv('DATABASE_HOST_JMOLIVAS'),
     'port' => getenv('DATABASE_PORT'),
