@@ -4,19 +4,23 @@ status: true
 dependencies:
   config:
     - field.field.site_setting_entity.site.field_description
+    - field.field.site_setting_entity.site.field_disqus_shortname
     - field.field.site_setting_entity.site.field_facebook
     - field.field.site_setting_entity.site.field_footer
     - field.field.site_setting_entity.site.field_github
+    - field.field.site_setting_entity.site.field_hero_image
     - field.field.site_setting_entity.site.field_keywords
     - field.field.site_setting_entity.site.field_linkedin
     - field.field.site_setting_entity.site.field_name
     - field.field.site_setting_entity.site.field_slogan
     - field.field.site_setting_entity.site.field_title
     - field.field.site_setting_entity.site.field_twitter
+    - field.field.site_setting_entity.site.field_twitter_handle
     - site_settings.site_setting_entity_type.site
   module:
     - field_group
     - link
+    - media_library
 third_party_settings:
   field_group:
     group_tabs:
@@ -34,6 +38,7 @@ third_party_settings:
       label: Tabs
     group_header:
       children:
+        - field_hero_image
         - field_name
         - field_slogan
         - field_facebook
@@ -68,6 +73,8 @@ third_party_settings:
         - field_title
         - field_description
         - field_keywords
+        - field_twitter_handle
+        - field_disqus_shortname
       parent_name: group_tabs
       weight: 20
       format_type: tab
@@ -91,8 +98,16 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_disqus_shortname:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_facebook:
-    weight: 4
+    weight: 16
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -108,12 +123,18 @@ content:
     type: string_textarea
     region: content
   field_github:
-    weight: 7
+    weight: 18
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_hero_image:
+    type: media_library_widget
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 25
@@ -124,7 +145,7 @@ content:
     type: string_textfield
     region: content
   field_linkedin:
-    weight: 8
+    weight: 19
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -133,14 +154,14 @@ content:
     region: content
   field_name:
     type: string_textfield
-    weight: 2
+    weight: 14
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_slogan:
-    weight: 3
+    weight: 15
     settings:
       size: 60
       placeholder: ''
@@ -156,12 +177,20 @@ content:
     type: string_textfield
     region: content
   field_twitter:
-    weight: 6
+    weight: 17
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_twitter_handle:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   fieldset:
     type: string_textfield
