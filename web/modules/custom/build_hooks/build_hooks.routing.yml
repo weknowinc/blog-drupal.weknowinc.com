@@ -1,0 +1,17 @@
+build_hooks.hook_form:
+  path: '/admin/config/build_hooks/hook'
+  defaults:
+    _form: '\Drupal\build_hooks\Form\HookForm'
+    _title: 'HookForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+build_hooks.trigger_controller_execute:
+  path: '/build_hooks/execute'
+  defaults:
+    _controller: '\Drupal\build_hooks\Controller\TriggerController::execute'
+    _title: 'Trigger Build'
+  requirements:
+    _permission: 'access content'
