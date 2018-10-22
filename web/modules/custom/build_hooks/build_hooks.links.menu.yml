@@ -1,0 +1,7 @@
+build_hooks.hook_form:
+  title: 'HookForm'
+  route_name: build_hooks.hook_form
+  description: 'Build hook settings'
+  parent: system.admin_config_system
+  weight: 99
+

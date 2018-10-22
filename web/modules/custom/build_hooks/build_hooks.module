@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains build_hooks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function build_hooks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the build_hooks module.
+    case 'help.page.build_hooks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('build hooks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implement hook_cron
+ */
+function build_hooks_cron() {
+  /** @var \Drupal\build_hooks\TriggerInterface $trigger */
+  $trigger = \Drupal::service('build_hooks.trigger');
+  $trigger->execute();
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function build_hooks_toolbar() {
+  $items['build_hooks'] = [
+    '#cache' => [
+      'contexts' => ['user.permissions'],
+    ],
+  ];
+
+  if (\Drupal::currentUser()->hasPermission('access admin')) {
+    $items['build_hooks'] += [
+      '#weight' => 999,
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Build Gatsby '),
+        '#url' => Url::fromRoute('build_hooks.trigger_controller_execute'),
+      ],
+    ];
+  }
+
+  return $items;
+}

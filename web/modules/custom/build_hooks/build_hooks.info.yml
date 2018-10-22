@@ -1,0 +1,5 @@
+name: 'build_hooks'
+type: module
+description: 'build hooks'
+core: 8.x
+package: 'Custom'
