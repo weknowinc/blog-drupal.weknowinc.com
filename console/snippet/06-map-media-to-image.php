@@ -11,7 +11,7 @@ foreach ($nodes as $node) {
 
   $node->field_image = $node->get('field_media_image')->entity;
 
-//  $node->field_media_image = null;
+  $node->field_media_image = null;
 
   $node->save();
 }

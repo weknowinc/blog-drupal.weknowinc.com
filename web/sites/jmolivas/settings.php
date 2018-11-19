@@ -791,5 +791,5 @@ if (file_exists($app_root . '/' . $site_path . '/settings.environment.php')) {
 
 $settings['install_profile'] = 'standard';
 
-global $content_directories;
-$content_directories['sync'] = '../content/jmolivas';
+// global $content_directories;
+// $content_directories['sync'] = '../content/jmolivas';

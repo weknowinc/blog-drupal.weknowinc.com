@@ -8,8 +8,8 @@ $files = $fileStorage->loadMultiple();
 $mediaStorage = \Drupal::entityTypeManager()
   ->getStorage('media');
 
-// jmolivas
-$uid = 6;
+// $uid = 6;
+$uid = 5;
 
 foreach ($files as $file) {
 

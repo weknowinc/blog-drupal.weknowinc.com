@@ -84,7 +84,8 @@
 
             /* Fetch Images from Drupal API */
             var fileItems = [];
-            jQuery.get('/api/media/image?include=field_media_image', function( data ) {
+            jQuery.get('/api/media/image?include=field_media_image&page[limit]=1000', function( data ) {
+                
                 var files = data.included;
                 data.data.forEach(function(item) {
 

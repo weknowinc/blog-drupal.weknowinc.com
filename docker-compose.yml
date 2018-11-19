@@ -9,6 +9,8 @@ services:
       MYSQL_DATABASE: ${DATABASE_NAME_JMOLIVAS}
       MYSQL_USER: ${DATABASE_USER_JMOLIVAS}
       MYSQL_PASSWORD: ${DATABASE_PASSWORD_JMOLIVAS}
+    # ports:
+    #   - '3306:3306'
     volumes:
       - mariadb_jmolivas:/var/lib/mysql
       # Place init .sql file(s) here
@@ -26,6 +28,8 @@ services:
       MYSQL_DATABASE: ${DATABASE_NAME_ENZO}
       MYSQL_USER: ${DATABASE_NAME_ENZO}
       MYSQL_PASSWORD: ${DATABASE_NAME_ENZO}
+    # ports:
+    #   - '3306:3306'
     volumes:
       - mariadb_enzo:/var/lib/mysql
       # Place init .sql file(s) here
@@ -50,7 +54,6 @@ services:
       DATABASE_USER_ENZO: ${DATABASE_USER_ENZO}
       DATABASE_PASSWORD_ENZO: ${DATABASE_PASSWORD_ENZO}
       DATABASE_HOST_ENZO: ${DATABASE_HOST_ENZO}
-      
     volumes:
       - ./:${DRUPAL_ROOT}:delegated
     depends_on:
