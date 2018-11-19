@@ -17,11 +17,14 @@ application:
     port: '22'
     user: 'drupal'
     type: 'ssh'
+  overrides:
+    config:
+      skip-validate-site-uuid: true
   options:
     learning: false
 #    target: 'site-alias.dev'
-    uri: 'jmolivas-drupal.weknowinc.com'
-#    uri: 'enzo-drupal.weknowinc.com'
+    # uri: 'jmolivas-drupal.weknowinc.com'
+    uri: 'enzo-drupal.weknowinc.com'
     generate-inline: false
     generate-chain: false
 #  default:

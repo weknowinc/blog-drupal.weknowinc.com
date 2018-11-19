@@ -7,12 +7,15 @@ $mediaStorage = \Drupal::entityTypeManager()
   ->getStorage('media');
 
 $nodes = $fileStorage->loadMultiple();
-$uid = 6;
+// $uid = 6;
+$uid = 5;
 foreach ($nodes as $node) {
 
   echo 'Updating node ' . $node->id() . ' - ' . $node->label() . PHP_EOL;
 
   $image = $node->get('field_image')->entity;
+
+
   if (!$image) {
     continue;
   }
@@ -33,7 +36,7 @@ foreach ($nodes as $node) {
 
   $node->field_media_image = $media;
 
-//  $node->field_image = null;
-//  $node->field_preview = null;
+  $node->field_image = null;
+  $node->field_preview = null;
   $node->save();
 }
