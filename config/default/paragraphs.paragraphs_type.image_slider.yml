@@ -1,9 +1,0 @@
-uuid: f4a4dbfb-22cb-4b5f-84bb-4f511f59594e
-langcode: en
-status: true
-dependencies: {  }
-id: image_slider
-label: 'Image Slider'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

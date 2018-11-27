@@ -1,9 +1,0 @@
-uuid: 0db9a0e0-b1c8-4a25-8790-659f1418158d
-langcode: en
-status: true
-dependencies: {  }
-id: custom_view
-label: 'Custom View'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

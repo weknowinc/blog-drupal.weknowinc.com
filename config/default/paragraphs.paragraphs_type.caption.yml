@@ -1,9 +1,0 @@
-uuid: 51292e4c-478c-44c4-8a7a-1d3dc12c8322
-langcode: en
-status: true
-dependencies: {  }
-id: caption
-label: Caption
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

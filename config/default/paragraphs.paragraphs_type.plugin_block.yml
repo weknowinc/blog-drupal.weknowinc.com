@@ -1,9 +1,0 @@
-uuid: 2104def4-d6d4-4e0c-9a0c-8cc4f14b2b8b
-langcode: en
-status: true
-dependencies: {  }
-id: plugin_block
-label: 'Custom Block (plugin)'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
