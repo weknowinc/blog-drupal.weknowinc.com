@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: CAc_ic5MrbV7lqQBWT2Je4fYfoNWCN-gTx_JM8LiFvY
 id: node.related_post
 label: 'Related Post'
 targetEntityType: node

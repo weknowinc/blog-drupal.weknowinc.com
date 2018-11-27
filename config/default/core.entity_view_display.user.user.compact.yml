@@ -1,4 +1,4 @@
-uuid: 25e0ec5e-243b-4ae4-b626-9f85345640d6
+uuid: eb586ae3-e509-40eb-a055-fb768a8dae15
 langcode: en
 status: true
 dependencies:
@@ -26,20 +26,4 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
-  field_avatar: true
-  field_bio: true
-  field_cover: true
-  field_dc_maintainer: true
-  field_domain_access: true
-  field_domain_admin: true
-  field_domain_all_affiliates: true
-  field_facebook: true
-  field_full_name: true
-  field_github: true
-  field_has_profile: true
-  field_linkedin: true
-  field_overlay_color: true
-  field_position: true
-  field_twitter: true
-  field_weight: true
   member_for: true

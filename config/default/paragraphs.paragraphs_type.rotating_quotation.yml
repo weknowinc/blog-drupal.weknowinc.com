@@ -1,9 +1,0 @@
-uuid: e9d86f9d-c042-4418-a285-a203923a99c1
-langcode: en
-status: true
-dependencies: {  }
-id: rotating_quotation
-label: 'Rotating Quotation'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

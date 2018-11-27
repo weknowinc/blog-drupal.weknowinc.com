@@ -1,82 +1,13 @@
-uuid: ca8079e5-c955-4d54-85ad-e114afb6cd6a
+uuid: ba79896e-a566-4ecb-8fcd-ff3ab06719a7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_avatar
-    - field.field.user.user.field_bio
-    - field.field.user.user.field_cover
-    - field.field.user.user.field_dc_maintainer
-    - field.field.user.user.field_domain_access
-    - field.field.user.user.field_domain_admin
-    - field.field.user.user.field_domain_all_affiliates
-    - field.field.user.user.field_facebook
-    - field.field.user.user.field_full_name
-    - field.field.user.user.field_github
-    - field.field.user.user.field_has_profile
-    - field.field.user.user.field_linkedin
-    - field.field.user.user.field_overlay_color
-    - field.field.user.user.field_position
-    - field.field.user.user.field_twitter
-    - field.field.user.user.field_weight
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - field_group
     - image
-    - link
-    - text
     - user
-third_party_settings:
-  field_group:
-    group_basic_information:
-      children:
-        - account
-        - language
-        - timezone
-      parent_name: ''
-      weight: 0
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: 'Basic Information'
-    group_personal_information:
-      children:
-        - field_full_name
-        - field_position
-        - field_bio
-        - field_cover
-        - field_avatar
-        - field_overlay_color
-        - field_facebook
-        - field_twitter
-        - field_github
-        - field_linkedin
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: 'Personal information'
-    group_extra_information:
-      children:
-        - field_has_profile
-        - field_dc_maintainer
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: 'Extra Information'
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -85,142 +16,23 @@ bundle: user
 mode: default
 content:
   account:
-    weight: 3
+    weight: -10
     region: content
-    settings: {  }
-    third_party_settings: {  }
   contact:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_avatar:
-    weight: 16
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_bio:
-    weight: 14
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_cover:
-    weight: 15
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_dc_maintainer:
-    weight: 15
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_domain_access:
-    type: options_buttons
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_domain_admin:
-    type: options_buttons
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_domain_all_affiliates:
-    type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
-    third_party_settings: {  }
-    region: content
-  field_facebook:
-    weight: 18
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_full_name:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_github:
-    weight: 20
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_has_profile:
-    weight: 14
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_linkedin:
-    weight: 21
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_overlay_color:
-    weight: 17
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_position:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_twitter:
-    weight: 19
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   language:
-    weight: 4
+    weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   timezone:
-    weight: 5
+    weight: 6
     region: content
-    settings: {  }
+  user_picture:
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-hidden:
-  field_weight: true
-  user_picture: true
+    weight: -1
+    region: content
+hidden: {  }

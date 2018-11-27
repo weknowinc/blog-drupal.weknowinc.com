@@ -1,11 +1,12 @@
-uuid: c719fa22-4462-4675-8a30-38d7d3f31660
+uuid: b5e72d88-6d67-43eb-88b6-0588a3e3f639
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: uKgwQEQEWbnGjAqxKpZufzhnECt1acCS2-zF_mF6nFo
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
 id: node
 label: Content
 tags:
   title: '[node:title] | [site:name]'
   description: '[node:summary]'
+  canonical_url: '[node:url]'

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_resume
     - node.type.article
+_core:
+  default_config_hash: 0puPFlpRBkjpAY9dhkZhTwmsXvm3j6i-qGVaoecJaWg
 id: node.article.field_resume
 field_name: field_resume
 entity_type: node

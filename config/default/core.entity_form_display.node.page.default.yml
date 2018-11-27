@@ -1,21 +1,21 @@
-uuid: 49c31ab0-d907-4b5c-b8aa-7335ecfc035c
+uuid: 00a907eb-a3d4-4e08-91ff-165255c9d950
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_domain_access
-    - field.field.node.page.field_domain_all_affiliates
+    - field.field.node.page.field_image
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
+    - media_library
     - metatag
     - path
     - text
     - yoast_seo
 _core:
-  default_config_hash: sWCotip3wyA0CvZUxyo-StTDU8TyTAhx5fcfOiHS6s4
+  default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -23,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 1
     region: content
     settings:
       rows: 9
@@ -32,31 +32,24 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_domain_access:
-    type: options_buttons
-    weight: 40
+  field_image:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_domain_all_affiliates:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 41
-    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_meta_tags:
-    weight: 122
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_yoast_seo:
-    weight: 123
+    weight: 10
     settings:
       body: body
     third_party_settings: {  }
@@ -64,7 +57,7 @@ content:
     region: content
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -72,26 +65,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 121
-    third_party_settings: {  }
+    weight: 8
     region: content
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -99,7 +92,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS

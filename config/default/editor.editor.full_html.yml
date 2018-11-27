@@ -1,107 +1,13 @@
-uuid: 61292cd5-4da8-42df-bb1f-ed6ba81b58a8
+uuid: e570e81d-22e9-47ee-9a9d-2d75e518a2eb
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.full_html
   module:
-    - ckeditor
-_core:
-  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+    - tui_editor
 format: full_html
-editor: ckeditor
+editor: tui_editor
 settings:
-  toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-            - Strike
-            - Superscript
-            - Subscript
-            - '-'
-            - RemoveFormat
-        -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Justify
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalImage
-            - Table
-            - HorizontalRule
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-        -
-          name: Tools
-          items:
-            - ShowBlocks
-            - CodeSnippet
-            - Source
-  plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
-    codesnippet:
-      highlight_style: github
-      highlight_languages:
-        apache: apache
-        bash: bash
-        css: css
-        coffeescript: coffeescript
-        dart: dart
-        dockerfile: dockerfile
-        dust: dust
-        gherkin: gherkin
-        go: go
-        haml: haml
-        handlebars: handlebars
-        ini: ini
-        json: json
-        java: java
-        javascript: javascript
-        less: less
-        makefile: makefile
-        markdown: markdown
-        nginx: nginx
-        php: php
-        perl: perl
-        powershell: powershell
-        puppet: puppet
-        python: python
-        ruby: ruby
-        scss: scss
-        sql: sql
-        twig: twig
-        typescript: typescript
-        xml: xml
-        yaml: yaml
-image_upload:
-  status: true
-  scheme: public
-  directory: inline-images
-  max_size: ''
-  max_dimensions:
-    width: null
-    height: null
+  saveHTMLToTextarea: 0
+image_upload: {  }

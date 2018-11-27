@@ -1,9 +1,0 @@
-uuid: cd6b0016-91dc-4482-812d-5e2354063ca2
-langcode: en
-status: true
-dependencies: {  }
-id: partners
-label: Partners
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

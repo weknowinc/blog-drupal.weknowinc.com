@@ -2,6 +2,8 @@ uuid: f69f4a84-c898-46e3-b8c4-72f5c2ea3d17
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: elP8yhdGR3zlQkPqTdBwS6WX04bVkikcH__LxfKr6s8
 name: blog_teaser_short
 label: 'Blog Teaser Short (600 x 400)'
 effects:

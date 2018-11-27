@@ -2,10 +2,8 @@ command:
   name: build
   description: 'Build site'
 commands:
-  #Import configuration
-  - command: config:import
-    options:
-      skip-uuid: true
+  # Import configuration
+  - command: config_split:import
   # Rebuild caches.
   - command: cache:rebuild
     arguments:

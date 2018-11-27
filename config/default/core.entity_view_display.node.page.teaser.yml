@@ -1,4 +1,4 @@
-uuid: 90ad16c9-b09e-400d-ad3d-1440f01288ac
+uuid: 898f4879-1e94-434d-b43c-dd8b3a792c73
 langcode: en
 status: true
 dependencies:
@@ -27,16 +27,4 @@ content:
   links:
     weight: 101
     region: content
-  title:
-    label: hidden
-    type: string
-    weight: -5
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-hidden:
-  field_domain_access: true
-  field_domain_all_affiliates: true
-  field_meta_tags: true
-  field_yoast_seo: true
+hidden: {  }

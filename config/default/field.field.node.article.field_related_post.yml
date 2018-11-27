@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_related_post
     - node.type.article
+_core:
+  default_config_hash: MXJcSfyxhK_pYDWP91T3jH6FivWqtLBldZ-t8UyyXh0
 id: node.article.field_related_post
 field_name: field_related_post
 entity_type: node

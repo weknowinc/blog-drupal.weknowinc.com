@@ -2,6 +2,8 @@ uuid: b7915276-ea90-49fd-abd8-fc8e38d20791
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: c3WrgRyjazygALZIYL3N5Nce8Qpvd1k2nfE7ytEZkCY
 name: related_blog
 label: 'Related blog (300 x 100)'
 effects:

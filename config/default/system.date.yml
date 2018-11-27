@@ -1,5 +1,5 @@
 country:
-  default: CR
+  default: ''
 first_day: 0
 timezone:
   default: UTC
@@ -7,3 +7,5 @@ timezone:
     configurable: true
     warn: false
     default: 0
+_core:
+  default_config_hash: V9UurX2GPT05NWKG9f2GWQqFG2TRG8vczidwjpy7Woo

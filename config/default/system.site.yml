@@ -1,10 +1,10 @@
-name: 'Blogs WeKnow'
-mail: noreply@weknowinc.com
+name: 'Drupal 8'
+mail: admin@example.org
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/222
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

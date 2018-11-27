@@ -2,6 +2,8 @@ uuid: 2b321566-776f-45f9-aea5-889a7572ccb8
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: u_yKgQvDzYsiQhSLmi8VlRFyr15yR_F251_ZItSNrbs
 name: hero
 label: 'Hero (1800 x 900)'
 effects:

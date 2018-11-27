@@ -783,7 +783,6 @@ $settings['entity_update_batch_size'] = 50;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$config_directories['sync'] = '../config/jmolivas';
 
 if (file_exists($app_root . '/' . $site_path . '/settings.environment.php')) {
     include $app_root . '/' . $site_path . '/settings.environment.php';
@@ -791,5 +790,8 @@ if (file_exists($app_root . '/' . $site_path . '/settings.environment.php')) {
 
 $settings['install_profile'] = 'standard';
 
-// global $content_directories;
-// $content_directories['sync'] = '../content/jmolivas';
+// Shared multi-site config
+$config_directories['sync'] = '../config/default';
+
+// Custom multi-site config
+$config['config_split.config_split.jmolivas']['status'] = TRUE;

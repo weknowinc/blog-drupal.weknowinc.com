@@ -1,0 +1,16 @@
+uuid: 6d54cbd5-f9e1-48bd-ae38-1e7ac883fd90
+langcode: en
+status: true
+dependencies: {  }
+id: jmolivas
+label: jmolivas
+description: ''
+folder: ../config/jmolivas
+module:
+  pathauto: 1
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

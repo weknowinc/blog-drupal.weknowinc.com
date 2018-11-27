@@ -1,4 +1,4 @@
-uuid: 9dd81c1d-d63b-4fb9-941a-ad5cf5812df2
+uuid: 930a61da-31ce-4c56-9d85-8fe934816ef9
 langcode: en
 status: true
 dependencies: {  }
@@ -11,7 +11,9 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access jsonapi resource list'
   - 'access site-wide contact form'
-  - 'access user profiles'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view media'
+  - 'view published site setting entities'
