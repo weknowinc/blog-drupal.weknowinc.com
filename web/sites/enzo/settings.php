@@ -795,4 +795,5 @@ $settings['install_profile'] = 'standard';
 $config_directories['sync'] = '../config/default';
 
 // Custom multi-site config
-// $config['config_split.config_split.jmolivas']['status'] = TRUE;
+$config['config_split.config_split.jmolivas']['status'] = FALSE;
+$config['config_split.config_split.enzo']['status'] = TRUE;
