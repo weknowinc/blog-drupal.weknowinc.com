@@ -4,20 +4,19 @@ status: true
 dependencies:
   module:
     - node
-id: content
-label: Content
+id: article
+label: Article
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
-  bdc2d352-36e2-44ff-ab83-645c0cc3cb34:
+  999d737e-d63e-465f-b48e-e49fc1bc256a:
     id: node_type
     bundles:
       article: article
-      page: page
     negate: false
     context_mapping:
       node: node
-    uuid: bdc2d352-36e2-44ff-ab83-645c0cc3cb34
+    uuid: 999d737e-d63e-465f-b48e-e49fc1bc256a
 selection_logic: and
 weight: -5
 relationships: {  }
