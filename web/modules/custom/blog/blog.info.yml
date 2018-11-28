@@ -1,5 +1,0 @@
-name: 'blog'
-type: module
-description: 'Blog'
-core: 8.x
-package: 'Custom'
