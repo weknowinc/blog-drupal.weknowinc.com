@@ -23,6 +23,9 @@ function tui_editor_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Implements hook_form_node_form_alter().
+ */
 function tui_editor_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id) {
   $node = $form_state->getFormObject()->getEntity();
   if ($node->getType()==='article' || $node->getType()==='page') {

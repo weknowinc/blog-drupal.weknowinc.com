@@ -32,9 +32,7 @@ function wk_custom_node_presave(EntityInterface $node) {
     return;
   }
 
-  $fieldImage = $node->get('field_image')->entity;
-
-  if ($fieldImage) {
+  if ($node->get('field_image')->entity) {
     return;
   }
 
