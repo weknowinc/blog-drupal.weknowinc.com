@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains wk_custom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wk_custom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wk_custom module.
+    case 'help.page.wk_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('WK Custom') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function wk_custom_node_presave(EntityInterface $node) {
+  if ($node->bundle() !== 'article') {
+    return;
+  }
+
+  $fieldImage = $node->get('field_image')->entity;
+
+  if ($fieldImage) {
+    return;
+  }
+
+  $siteSettings = \Drupal::service('site_settings.loader')->loadAll();
+
+  if (!$siteSettings){
+    return;
+  }
+
+  if (!array_key_exists('default', $siteSettings) || !array_key_exists('default', $siteSettings['default']) ) {
+    return;
+  }
+
+  $mediaStorage = \Drupal::entityTypeManager()
+    ->getStorage('media');
+
+  $media = $mediaStorage->load($siteSettings['default']['default']);
+
+  if (!$media) {
+    return;
+  }
+  
+  $node->field_image = $media;
+}

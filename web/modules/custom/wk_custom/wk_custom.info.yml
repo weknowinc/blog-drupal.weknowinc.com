@@ -1,0 +1,5 @@
+name: 'wk_custom'
+type: module
+description: 'WK Custom'
+core: 8.x
+package: 'Custom'
