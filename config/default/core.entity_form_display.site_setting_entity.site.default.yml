@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.site_setting_entity.site.field_article_image
     - field.field.site_setting_entity.site.field_description
     - field.field.site_setting_entity.site.field_disqus_shortname
     - field.field.site_setting_entity.site.field_facebook
@@ -28,6 +29,7 @@ third_party_settings:
         - group_basic_information
         - group_header
         - group_footer
+        - group_default
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -85,11 +87,30 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Basic Information'
+    group_default:
+      children:
+        - field_article_image
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Default
 id: site_setting_entity.site.default
 targetEntityType: site_setting_entity
 bundle: site
 mode: default
 content:
+  field_article_image:
+    type: media_library_widget
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_description:
     weight: 24
     settings:

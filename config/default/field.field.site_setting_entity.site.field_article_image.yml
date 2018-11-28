@@ -1,15 +1,15 @@
-uuid: e5d108d1-11d1-43cd-be2f-d147a230ab70
+uuid: d8d0d762-08a5-46a6-983c-16922a3bb932
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.site_setting_entity.field_article_image
     - media.type.image
-    - site_settings.site_setting_entity_type.default
-id: site_setting_entity.default.field_article_image
+    - site_settings.site_setting_entity_type.site
+id: site_setting_entity.site.field_article_image
 field_name: field_article_image
 entity_type: site_setting_entity
-bundle: default
+bundle: site
 label: 'Article image'
 description: ''
 required: false

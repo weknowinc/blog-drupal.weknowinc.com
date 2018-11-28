@@ -24,6 +24,9 @@ function wk_custom_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Implements hook_node_presave().
+ */
 function wk_custom_node_presave(EntityInterface $node) {
   if ($node->bundle() !== 'article') {
     return;
@@ -41,14 +44,17 @@ function wk_custom_node_presave(EntityInterface $node) {
     return;
   }
 
-  if (!array_key_exists('default', $siteSettings) || !array_key_exists('default', $siteSettings['default']) ) {
+  if (!array_key_exists('site', $siteSettings) || 
+      !array_key_exists('site', $siteSettings['site']) || 
+      !array_key_exists('field_article_image', $siteSettings['site']['site']) 
+    ) {
     return;
   }
 
   $mediaStorage = \Drupal::entityTypeManager()
     ->getStorage('media');
 
-  $media = $mediaStorage->load($siteSettings['default']['default']);
+  $media = $mediaStorage->load($siteSettings['site']['site']['field_article_image']);
 
   if (!$media) {
     return;
