@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.site_setting_entity.site.field_article_image
     - field.field.site_setting_entity.site.field_description
     - field.field.site_setting_entity.site.field_disqus_shortname
     - field.field.site_setting_entity.site.field_facebook
@@ -25,6 +26,15 @@ targetEntityType: site_setting_entity
 bundle: site
 mode: default
 content:
+  field_article_image:
+    type: entity_reference_entity_view
+    weight: 15
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_description:
     weight: 10
     label: above
