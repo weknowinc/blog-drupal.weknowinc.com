@@ -1,9 +1,0 @@
-name: "wk_migration"
-type: module
-description: Migrate WK posts.
-core: 8.x
-package: Custom
-dependencies:
-  - migrate_plus
-  - migrate_tools
-  - migrate_drupal
