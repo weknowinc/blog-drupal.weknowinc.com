@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Url;
 
 /**
@@ -28,32 +29,40 @@ function build_hooks_help($route_name, RouteMatchInterface $route_match) {
  * Implement hook_cron
  */
 function build_hooks_cron() {
-  /** @var \Drupal\build_hooks\TriggerInterface $trigger */
-  $trigger = \Drupal::service('build_hooks.trigger');
-  $trigger->execute();
+  getTriggerService()->executeCron();
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function build_hooks_entity_update(EntityInterface $entity) {
+  getTriggerService()->executeNode($entity->getType());
 }
 
 /**
  * Implements hook_toolbar().
  */
 function build_hooks_toolbar() {
-  $items['build_hooks'] = [
-    '#cache' => [
-      'contexts' => ['user.permissions'],
-    ],
-  ];
-
-  if (\Drupal::currentUser()->hasPermission('access admin')) {
-    $items['build_hooks'] += [
+  
+  if (getTriggerService()->showMenu()) {
+    $items['build_hooks'] = [
+      '#cache' => [
+        'contexts' => ['user.permissions'],
+      ],
       '#weight' => 999,
       '#type' => 'toolbar_item',
       'tab' => [
         '#type' => 'link',
-        '#title' => t('Build Gatsby '),
+        '#title' => t('Execute Build Hook'),
         '#url' => Url::fromRoute('build_hooks.trigger_controller_execute'),
-      ],
+      ]
     ];
-  }
 
-  return $items;
+    return $items;
+  }
+}
+
+function getTriggerService()
+{
+  return \Drupal::service('build_hooks.trigger');
 }

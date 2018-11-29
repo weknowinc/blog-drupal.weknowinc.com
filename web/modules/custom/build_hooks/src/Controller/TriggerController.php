@@ -36,12 +36,6 @@ class TriggerController extends ControllerBase {
     );
   }
 
-  /**
-   * Execute.
-   *
-   * @return string
-   *   Return Hello string.
-   */
   public function execute() {
     $previousUrl = \Drupal::request()
       ->server->get('HTTP_REFERER');
@@ -49,9 +43,6 @@ class TriggerController extends ControllerBase {
     $referer = Request::create($previousUrl);
 
     $this->buildHooksTrigger->execute();
-
-    \Drupal::messenger()
-      ->addMessage('Build executed');
 
     return new RedirectResponse($referer->getRequestUri());
   }

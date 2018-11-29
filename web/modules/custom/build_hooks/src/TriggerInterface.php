@@ -8,8 +8,25 @@ namespace Drupal\build_hooks;
 interface TriggerInterface {
 
   /**
-   * return bool
+   * return void
    */
   public function execute();
+
+  /**
+   * return void
+   */
+  public function executeCron();
+
+  /**
+   * @param String $nodeType
+   *
+   * return void
+   */
+  public function executeNode($nodeType);
+
+  /**
+   * return void
+   */
+  public function showMenu();
 
 }
