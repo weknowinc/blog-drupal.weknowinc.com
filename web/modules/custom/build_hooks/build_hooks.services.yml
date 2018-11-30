@@ -1,4 +1,0 @@
-services:
-  build_hooks.trigger:
-    class: Drupal\build_hooks\Trigger
-    arguments: ['@config.factory', '@http_client', '@current_user', '@string_translation', '@messenger', '@logger.factory']
