@@ -1,5 +1,0 @@
-name: 'build_hooks'
-type: module
-description: 'Triggers a build hook on any service provider that supports it.'
-core: 8.x
-package: 'Custom'
