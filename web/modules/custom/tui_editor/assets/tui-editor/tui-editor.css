@@ -401,7 +401,7 @@
     margin-right: auto;
     border: 1px solid #cacaca;
     background: white;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .tui-popup-modal-background .tui-popup-wrapper {
