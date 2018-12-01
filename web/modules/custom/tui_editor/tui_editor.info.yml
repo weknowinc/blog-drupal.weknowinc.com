@@ -1,5 +1,5 @@
-name: tuieditor
+name: Toast UI Editor
 type: module
-description: Toast UI Editor - GFM Markdown WYSIWYG Editor
+description: Toast UI Editor integration - GFM Markdown WYSIWYG Editor
 core: 8.x
 package: Editor

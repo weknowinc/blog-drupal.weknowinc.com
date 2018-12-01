@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -28,9 +30,60 @@ function tui_editor_help($route_name, RouteMatchInterface $route_match) {
  */
 function tui_editor_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id) {
   $node = $form_state->getFormObject()->getEntity();
+  // @TODO Add a custom form to select a valid content Type
   if ($node->getType()==='article' || $node->getType()==='page') {
     $form['body']['#attributes']['class'][] = 'hidden';
     $form['body']['#prefix'] = '<div id="node-edit-form-textarea-wrapper">';
     $form['body']['#suffix'] = '</div>';
+    $form['media'] = media_modal();
   }
+}
+
+function media_modal() {
+  $widget_id = 'markdown_media';
+  return [
+    'media_library_open_button' => [
+      '#type' => 'link',
+      '#title' => t('Browse media'),
+      '#name' => 'chip-media-open-library-button',
+      '#url' => Url::fromRoute('view.media_library.widget', [], [
+        'query' => [
+          'media_library_widget_id' => $widget_id,
+          'media_library_allowed_types' => ['image'],
+          'media_library_remaining' => 1,
+        ],
+      ]),
+      '#attributes' => [
+        'class' => ['btn', 'button', 'use-ajax', 'media-library-open-button', 'js-hide'],
+        'data-dialog-type' => 'modal',
+        'data-dialog-options' => json_encode([
+          'dialogClass' => 'media-library-widget-modal',
+          'height' => '75%',
+          'width' => '75%',
+          'title' => t('Media library'),
+        ]),
+      ],
+    ],
+    'media_library_selection' => [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'class' => ['js-hide'],
+        'data-media-library-widget-value' => $widget_id,
+      ],
+    ],
+    // When a selection is made this hidden button is pressed to add new media
+    // items based on the "media_library_selection" value.
+    'media_library_update_widget' => [
+      '#type' => 'button',
+      '#value' => t('Update widget'),
+      '#name' => 'media-library-update',
+      '#attributes' => [
+        'data-media-library-widget-update' => $widget_id,
+        'onsubmit' => 'return false;',
+        'class' => ['js-hide'],
+      ],
+      '#submit' => FALSE,
+    ],
+  ];
+
 }
