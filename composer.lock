@@ -4622,17 +4622,17 @@
         },
         {
             "name": "drupal/tui_editor",
-            "version": "1.1.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/tui_editor",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tui_editor-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "a82636e2ef16ea9a625945762f2006fde3b17e50"
+                "url": "https://ftp.drupal.org/files/projects/tui_editor-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "94dbd93b248372b34b707356924ce1ba564b42e2"
             },
             "require": {
                 "drupal/core": "*"
@@ -4643,8 +4643,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1543781580",
+                    "version": "8.x-1.4",
+                    "datestamp": "1543789680",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
