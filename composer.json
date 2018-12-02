@@ -76,6 +76,7 @@
         "drupal/title": "2.x-dev",
         "drupal/token": "^1.1",
         "drupal/tome": "^1.0@alpha",
+        "drupal/tui_editor": "^1.1",
         "drupal/twig_field_value": "^1.1",
         "drupal/twig_tweak": "^1.9",
         "drupal/viewfield": "^3.0@alpha",
