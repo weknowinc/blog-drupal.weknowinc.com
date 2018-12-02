@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd5fd6b41826d3dd36e1477743c9195d",
+    "content-hash": "e8bd789dd2af1dc3cbb8cfa388a6ceb6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4618,6 +4618,53 @@
             "homepage": "https://www.drupal.org/project/tome",
             "support": {
                 "source": "http://cgit.drupalcode.org/tome"
+            }
+        },
+        {
+            "name": "drupal/tui_editor",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/tui_editor",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tui_editor-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "a82636e2ef16ea9a625945762f2006fde3b17e50"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1543781580",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jmolivas",
+                    "homepage": "https://www.drupal.org/user/678770"
+                }
+            ],
+            "description": "Toast UI Editor integration - GFM Markdown WYSIWYG Editor",
+            "homepage": "https://www.drupal.org/project/tui_editor",
+            "support": {
+                "source": "http://cgit.drupalcode.org/tui_editor"
             }
         },
         {
