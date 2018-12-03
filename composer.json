@@ -1,12 +1,12 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "weknowinc/blog-drupal.weknowinc.com",
+    "description": "Weknow Drupal Blog Multiste",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "",
-            "role": ""
+            "name": "jmolivas@weknowinc.com",
+            "role": "Head Of Products"
         }
     ],
     "repositories": [
@@ -93,8 +93,6 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
-        "enable-patching": true,
-        "patches": {
-        }
+        "enable-patching": true
     }
 }
