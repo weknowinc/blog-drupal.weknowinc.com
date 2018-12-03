@@ -5,20 +5,16 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_image
-    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_overlay_color
     - field.field.node.article.field_related_post
     - field.field.node.article.field_resume
     - field.field.node.article.field_tags
-    - field.field.node.article.field_yoast_seo
     - node.type.article
   module:
     - field_group
     - media_library
-    - metatag
     - path
     - text
-    - yoast_seo
 third_party_settings:
   field_group:
     group_tabs:
@@ -94,12 +90,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_meta_tags:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_overlay_color:
     type: options_select
     weight: 13
@@ -132,13 +122,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_yoast_seo:
-    weight: 8
-    settings:
-      body: body
-    third_party_settings: {  }
-    type: yoast_seo_widget
-    region: content
   path:
     type: path
     weight: 6
