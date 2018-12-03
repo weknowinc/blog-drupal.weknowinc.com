@@ -4,7 +4,6 @@ services:
   mariadb_jmolivas:
     image: wodby/mariadb:10.2-3.1.3
     env_file: ./.env
-    restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'true'
       MYSQL_DATABASE: ${DATABASE_NAME_JMOLIVAS}
@@ -22,7 +21,6 @@ services:
   mariadb_enzo:
     image: wodby/mariadb:10.2-3.1.3
     env_file: ./.env
-    restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'true'
       MYSQL_DATABASE: ${DATABASE_NAME_ENZO}
@@ -40,7 +38,6 @@ services:
   php:
     image: wodby/drupal-php:7.2-4.7.5
     env_file: ./.env
-    restart: always
     environment:
       ENVIRONMENT: ${ENVIRONMENT}
       DATABASE_PORT: ${DATABASE_PORT}
