@@ -5,8 +5,8 @@ $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
 
 # kint
-require_once DRUPAL_ROOT . '/modules/contrib/devel/kint/kint/Kint.class.php';
-Kint::$maxLevels = 5;
+// require_once DRUPAL_ROOT . '/modules/contrib/devel/kint/kint/Kint.class.php';
+// Kint::$maxLevels = 5;
 
 # Disable cache
 $settings['cache']['bins']['render'] = 'cache.backend.null';
