@@ -26,8 +26,8 @@ content:
     region: content
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: full
+      link: false
     third_party_settings: {  }
   links:
     weight: 1
