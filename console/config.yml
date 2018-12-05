@@ -23,7 +23,7 @@ application:
   options:
     learning: false
 #    target: 'site-alias.dev'
-    # uri: 'jmolivas-drupal.weknowinc.com'
+    uri: 'jmolivas-drupal.weknowinc.com'
     # uri: 'enzo-drupal.weknowinc.com'
     generate-inline: false
     generate-chain: false
