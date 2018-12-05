@@ -1,12 +1,10 @@
 build_hook: 'https://api.netlify.com/build_hooks/5bd4b7d83813f0470541a69b'
-triggers:
-  cron: 0
-  menu: 1
-  node:
-    article: 0
-    page: 0
 messages:
   log: 1
   show: 1
-_core:
-  default_config_hash: eqOFj_wolm23bLRF9x0QkRU4sdQj7t9bMYWbf-kwHjg
+triggers:
+  cron: 1
+  menu: 1
+  node:
+    article: 1
+    page: 1
