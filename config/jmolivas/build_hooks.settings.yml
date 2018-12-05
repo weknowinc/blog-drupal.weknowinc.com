@@ -6,5 +6,5 @@ triggers:
   cron: 1
   menu: 1
   node:
-    article: 1
-    page: 1
+    article: 0
+    page: 0
