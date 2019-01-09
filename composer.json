@@ -28,8 +28,8 @@
         "drupal/core": "~8.6",
         "drupal/ctools": "^3.0",
         "drupal/field_group": "^1.0",
-        "drupal/jsonapi": "^1.2",
-        "drupal/jsonapi_extras": "^2.9",
+        "drupal/jsonapi": "^2.0",
+        "drupal/jsonapi_extras": "^3.2",
         "drupal/markdown": "^1.2",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
@@ -37,6 +37,7 @@
         "drupal/subpathauto": "^1.0@RC",
         "drupal/token": "^1.1",
         "drupal/tui_editor": "^1.1",
+        "drupal/yoast_seo": "^1.5",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
