@@ -1,0 +1,16 @@
+command:
+  name: install
+  description: 'Install Drupal Blog Profile'
+commands:
+  # Install Site
+  - command: 'site:install'
+    options:
+        force: true
+    arguments:
+        profile: standard
+  # Import configuration
+  - command: config:import
+  # Rebuild caches.
+  - command: cache:rebuild
+    arguments:
+        cache: all
