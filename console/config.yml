@@ -25,6 +25,7 @@ application:
 #    target: 'site-alias.dev'
     uri: 'jmolivas-drupal.weknowinc.com'
     # uri: 'enzo-drupal.weknowinc.com'
+    # uri: 'omers-drupal.weknowinc.com'
     generate-inline: false
     generate-chain: false
 #  default:

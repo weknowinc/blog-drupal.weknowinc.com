@@ -1,0 +1,16 @@
+langcode: en
+status: false
+dependencies: {  }
+id: omers
+label: omers
+description: jmolivas
+folder: ../config/omers
+module: {  }
+theme: {  }
+blacklist:
+  - build_hooks.settings
+  - pathauto.pattern.article
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
