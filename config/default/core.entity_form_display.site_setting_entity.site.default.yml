@@ -38,6 +38,7 @@ third_party_settings:
         classes: ''
         direction: horizontal
       label: Tabs
+      region: content
     group_header:
       children:
         - field_hero_image
@@ -57,6 +58,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Header
+      region: content
     group_footer:
       children:
         - field_footer
@@ -70,6 +72,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Footer
+      region: content
     group_basic_information:
       children:
         - field_title
@@ -87,6 +90,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Basic Information'
+      region: content
     group_default:
       children:
         - field_article_image
@@ -100,6 +104,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Default
+      region: content
 id: site_setting_entity.site.default
 targetEntityType: site_setting_entity
 bundle: site

@@ -30,6 +30,7 @@ third_party_settings:
         id: ''
         classes: ''
       label: Tabs
+      region: content
     group_basic_information:
       children:
         - title
@@ -47,6 +48,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Basic Information'
+      region: content
     group_content:
       children:
         - body
@@ -62,6 +64,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Content
+      region: content
 _core:
   default_config_hash: vPb_yvhA-xuNoV_yOmOwYxGuHNRIH1CoMK2qi7BSga0
 id: node.article.default
