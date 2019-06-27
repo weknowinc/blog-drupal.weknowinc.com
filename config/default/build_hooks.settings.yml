@@ -3,7 +3,7 @@ messages:
   log: 1
   show: 1
 triggers:
-  cron: 0
+  cron: 1
   menu: 1
   node:
     article: 0
