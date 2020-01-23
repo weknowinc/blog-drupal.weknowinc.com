@@ -57,11 +57,5 @@
  */
 
 $sites = [];
-$sites['jmolivas-drupal.weknowinc.com'] = 'jmolivas';
-$sites['jmolivas-drupal.weknowinc.develop'] = 'jmolivas';
-
 $sites['enzo-drupal.weknowinc.com'] = 'enzo';
 $sites['enzo-drupal.weknowinc.develop'] = 'enzo';
-
-$sites['omers-drupal.weknowinc.com'] = 'omers';
-$sites['omers-drupal.weknowinc.develop'] = 'omers';
