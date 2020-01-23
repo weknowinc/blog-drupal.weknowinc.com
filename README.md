@@ -92,7 +92,7 @@ $ ahoy drupal build
 
 Now the dependencies are installed and the new configurations imported, do you need proceed with the theme setup section.
 
-## Using Drupal Console
+## Using Drupal Console for development
 
 When I have a multi-site I have to point the commands to the installation/domain of each site:
 
@@ -165,14 +165,6 @@ ahoy drupal config:export --no-interaction
 
 ```
 
-## Using Drupal Console for development
-
-Use `ahoy` to execute commands
-
-```
-$ ahoy drupal [commmand name]
-```
-
 ## Stop containers and cleanup
 
 In case you need stop the containers you can use `ahoy`
@@ -203,7 +195,7 @@ To fix this problem we recommend that the mentioned port is not used by other ap
 
 ```
 # run the command to see which proccess is using the port
-lsof -i :80
+lsof -i :80 or sudo lsof -i :80 in macOS
 
 COMMAND   PID     USER   FD   TYPE   DEVICE SIZE NODE NAME
 apache2 10437     root    3u  IPv6 22890556       TCP *:www (LISTEN)
