@@ -15,6 +15,17 @@ Ahoy is the used tool to standardize the definition of custom shell commands tha
 - [ahoy](https://github.com/ahoy-cli/ahoy)
 - The custom command definition was done on the [.ahoy.yml](.ahoy.yml)
 
+## SSH and SCP website server access
+
+Example drupal-staging
+```
+ssh -i ~/.ssh/devoops/id_rsa deploy@drupal-staging.weknowinc.com
+```
+SCP / download files
+```
+scp -i ~/.ssh/devoops/id_rsa deploy@enzo-drupal.weknowinc.com:/home/deploy/2019-backup/enzo-files-backup.tar.gz .
+```
+
 ## Project Setup
 
 ### Fork and Clone repo at github
